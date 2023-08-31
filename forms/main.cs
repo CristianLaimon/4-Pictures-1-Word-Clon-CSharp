@@ -31,7 +31,7 @@ namespace _4pictures1word
             statsitos = JsonManager.GetJSONstats();
             labelLevelNumber.Text = statsitos.Level.ToString();
             labelMoneyNumber.Text = statsitos.Money.ToString();
-            gameMachine.RandomWord();
+            string wordSelected = gameMachine.RandomWord().ToString(); //AQUÍ ME QUEDÉ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA, FALTA EL RESTO
         }
 
 
