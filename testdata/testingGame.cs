@@ -13,7 +13,7 @@ namespace _4pictures1word.testdata
     {
         public static void Serializewords()
         {
-            List<Palabra> palabras = new List<Palabra>
+            Palabra[] palabras = new Palabra[]
             {
                 new Palabra("Felicidad", new string[] {@"images\zorro_1", @"images\zorro_2", @"images\zorro_3", @"images\zorro_4"})
             };

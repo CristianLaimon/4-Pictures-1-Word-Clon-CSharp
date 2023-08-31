@@ -19,9 +19,9 @@ namespace _4pictures1word.krsutils
             return importedStats;
         }
 
-        public static List<Palabra> GetJSONword()
-        {
-            List<Palabra> palabritas = 
-        }
+        //public static Palabra[] GetJSONword()
+        //{
+           
+        //}
     }
 }
