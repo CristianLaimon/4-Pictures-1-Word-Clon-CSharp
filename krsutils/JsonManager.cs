@@ -12,7 +12,7 @@ namespace _4pictures1word.krsutils
     {
         public static Stats GetJSONstats()
         {
-            string text = File.ReadAllText(Path.Combine(Environment.CurrentDirectory, @"data\stats.json"));
+            string text = File.ReadAllText(Path.Combine(Environment.CurrentDirectory, @"testdata\stats.json"));
 
             Stats importedStats = JsonConvert.DeserializeObject<Stats>(text);
 
