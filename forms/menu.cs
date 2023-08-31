@@ -1,4 +1,4 @@
-﻿using _4pictures1word.testdata;
+﻿using _4pictures1word.krsutils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,8 +17,8 @@ namespace _4pictures1word.forms
         {
             InitializeComponent();
             //solo debugging y ya
-            testingGame.Serializewords();
-            testingGame.Serializestats();
+            JsonManager.Serializewords();
+            JsonManager.Serializestats();
         }
 
         private void buttonJugar_Click(object sender, EventArgs e)

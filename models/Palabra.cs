@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace _4pictures1word.models
 {
     [Serializable]
-    internal class Palabra
+    public class Palabra
     {
         private string word;
         private bool resolved;

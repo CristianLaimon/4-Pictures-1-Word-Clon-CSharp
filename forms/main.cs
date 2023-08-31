@@ -33,6 +33,11 @@ namespace _4pictures1word
             labelMoneyNumber.Text = statsitos.Money.ToString();
         }
 
+        private void ChooseWord()
+        {
+
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
 
