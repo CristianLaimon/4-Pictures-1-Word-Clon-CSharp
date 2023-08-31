@@ -1,6 +1,6 @@
 ﻿namespace _4pictures1word
 {
-    partial class main
+    partial class Main
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,254 +28,275 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.SuspendLayout();
+            pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            pictureBox4 = new PictureBox();
+            button1 = new Button();
+            button2 = new Button();
+            button3 = new Button();
+            button4 = new Button();
+            button5 = new Button();
+            button6 = new Button();
+            button7 = new Button();
+            button8 = new Button();
+            button9 = new Button();
+            button10 = new Button();
+            button11 = new Button();
+            button12 = new Button();
+            button13 = new Button();
+            button14 = new Button();
+            button15 = new Button();
+            label1 = new Label();
+            label2 = new Label();
+            labelLevelNumber = new Label();
+            labelMoneyNumber = new Label();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            SuspendLayout();
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(114, 70);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(235, 215);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.Location = new Point(114, 70);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(235, 215);
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(355, 70);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(235, 215);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            pictureBox2.Location = new Point(355, 70);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(235, 215);
+            pictureBox2.TabIndex = 1;
+            pictureBox2.TabStop = false;
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(114, 291);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(235, 215);
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
+            pictureBox3.Location = new Point(114, 291);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(235, 215);
+            pictureBox3.TabIndex = 2;
+            pictureBox3.TabStop = false;
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(355, 291);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(235, 215);
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
+            pictureBox4.Location = new Point(355, 291);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(235, 215);
+            pictureBox4.TabIndex = 3;
+            pictureBox4.TabStop = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(94, 555);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(58, 57);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.Location = new Point(94, 555);
+            button1.Name = "button1";
+            button1.Size = new Size(58, 57);
+            button1.TabIndex = 4;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(158, 555);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(58, 57);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            button2.Location = new Point(158, 555);
+            button2.Name = "button2";
+            button2.Size = new Size(58, 57);
+            button2.TabIndex = 5;
+            button2.Text = "button2";
+            button2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(222, 555);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(58, 57);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            button3.Location = new Point(222, 555);
+            button3.Name = "button3";
+            button3.Size = new Size(58, 57);
+            button3.TabIndex = 6;
+            button3.Text = "button3";
+            button3.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(286, 555);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(58, 57);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            button4.Location = new Point(286, 555);
+            button4.Name = "button4";
+            button4.Size = new Size(58, 57);
+            button4.TabIndex = 7;
+            button4.Text = "button4";
+            button4.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(350, 555);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(58, 57);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
+            button5.Location = new Point(350, 555);
+            button5.Name = "button5";
+            button5.Size = new Size(58, 57);
+            button5.TabIndex = 8;
+            button5.Text = "button5";
+            button5.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(414, 555);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(58, 57);
-            this.button6.TabIndex = 9;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
+            button6.Location = new Point(414, 555);
+            button6.Name = "button6";
+            button6.Size = new Size(58, 57);
+            button6.TabIndex = 9;
+            button6.Text = "button6";
+            button6.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(478, 555);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(58, 57);
-            this.button7.TabIndex = 10;
-            this.button7.Text = "button7";
-            this.button7.UseVisualStyleBackColor = true;
+            button7.Location = new Point(478, 555);
+            button7.Name = "button7";
+            button7.Size = new Size(58, 57);
+            button7.TabIndex = 10;
+            button7.Text = "button7";
+            button7.UseVisualStyleBackColor = true;
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(94, 618);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(58, 57);
-            this.button8.TabIndex = 11;
-            this.button8.Text = "button8";
-            this.button8.UseVisualStyleBackColor = true;
+            button8.Location = new Point(94, 618);
+            button8.Name = "button8";
+            button8.Size = new Size(58, 57);
+            button8.TabIndex = 11;
+            button8.Text = "button8";
+            button8.UseVisualStyleBackColor = true;
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(158, 618);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(58, 57);
-            this.button9.TabIndex = 12;
-            this.button9.Text = "button9";
-            this.button9.UseVisualStyleBackColor = true;
+            button9.Location = new Point(158, 618);
+            button9.Name = "button9";
+            button9.Size = new Size(58, 57);
+            button9.TabIndex = 12;
+            button9.Text = "button9";
+            button9.UseVisualStyleBackColor = true;
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(222, 618);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(58, 57);
-            this.button10.TabIndex = 13;
-            this.button10.Text = "button10";
-            this.button10.UseVisualStyleBackColor = true;
+            button10.Location = new Point(222, 618);
+            button10.Name = "button10";
+            button10.Size = new Size(58, 57);
+            button10.TabIndex = 13;
+            button10.Text = "button10";
+            button10.UseVisualStyleBackColor = true;
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(286, 618);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(58, 57);
-            this.button11.TabIndex = 14;
-            this.button11.Text = "button11";
-            this.button11.UseVisualStyleBackColor = true;
+            button11.Location = new Point(286, 618);
+            button11.Name = "button11";
+            button11.Size = new Size(58, 57);
+            button11.TabIndex = 14;
+            button11.Text = "button11";
+            button11.UseVisualStyleBackColor = true;
             // 
             // button12
             // 
-            this.button12.Location = new System.Drawing.Point(350, 618);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(58, 57);
-            this.button12.TabIndex = 15;
-            this.button12.Text = "button12";
-            this.button12.UseVisualStyleBackColor = true;
+            button12.Location = new Point(350, 618);
+            button12.Name = "button12";
+            button12.Size = new Size(58, 57);
+            button12.TabIndex = 15;
+            button12.Text = "button12";
+            button12.UseVisualStyleBackColor = true;
             // 
             // button13
             // 
-            this.button13.Location = new System.Drawing.Point(414, 618);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(58, 57);
-            this.button13.TabIndex = 16;
-            this.button13.Text = "button13";
-            this.button13.UseVisualStyleBackColor = true;
+            button13.Location = new Point(414, 618);
+            button13.Name = "button13";
+            button13.Size = new Size(58, 57);
+            button13.TabIndex = 16;
+            button13.Text = "button13";
+            button13.UseVisualStyleBackColor = true;
             // 
             // button14
             // 
-            this.button14.Location = new System.Drawing.Point(478, 618);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(58, 57);
-            this.button14.TabIndex = 17;
-            this.button14.Text = "button14";
-            this.button14.UseVisualStyleBackColor = true;
+            button14.Location = new Point(478, 618);
+            button14.Name = "button14";
+            button14.Size = new Size(58, 57);
+            button14.TabIndex = 17;
+            button14.Text = "button14";
+            button14.UseVisualStyleBackColor = true;
             // 
             // button15
             // 
-            this.button15.Location = new System.Drawing.Point(555, 555);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(76, 119);
-            this.button15.TabIndex = 18;
-            this.button15.Text = "¿Ayuda? Coste = 15 ";
-            this.button15.UseVisualStyleBackColor = true;
+            button15.Location = new Point(555, 555);
+            button15.Name = "button15";
+            button15.Size = new Size(76, 119);
+            button15.TabIndex = 18;
+            button15.Text = "¿Ayuda? Coste = 15 ";
+            button15.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(608, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 20);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "Dinero 0";
+            label1.AutoSize = true;
+            label1.Location = new Point(566, 22);
+            label1.Name = "label1";
+            label1.Size = new Size(54, 20);
+            label1.TabIndex = 19;
+            label1.Text = "Dinero";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(40, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 20);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "Nivel #";
+            label2.AutoSize = true;
+            label2.Location = new Point(40, 22);
+            label2.Name = "label2";
+            label2.Size = new Size(43, 20);
+            label2.TabIndex = 20;
+            label2.Text = "Nivel";
             // 
-            // Form1
+            // labelLevelNumber
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(718, 731);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button15);
-            this.Controls.Add(this.button14);
-            this.Controls.Add(this.button13);
-            this.Controls.Add(this.button12);
-            this.Controls.Add(this.button11);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
-            this.Name = "Form1";
-            this.Text = "4 Pictures 1 Answer";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            labelLevelNumber.AutoSize = true;
+            labelLevelNumber.Location = new Point(89, 22);
+            labelLevelNumber.Name = "labelLevelNumber";
+            labelLevelNumber.Size = new Size(60, 20);
+            labelLevelNumber.TabIndex = 21;
+            labelLevelNumber.Text = "numero";
+            // 
+            // labelMoneyNumber
+            // 
+            labelMoneyNumber.AutoSize = true;
+            labelMoneyNumber.Location = new Point(626, 22);
+            labelMoneyNumber.Name = "labelMoneyNumber";
+            labelMoneyNumber.Size = new Size(103, 20);
+            labelMoneyNumber.TabIndex = 22;
+            labelMoneyNumber.Text = "numerodinero";
+            // 
+            // Main
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(718, 731);
+            Controls.Add(labelMoneyNumber);
+            Controls.Add(labelLevelNumber);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(button15);
+            Controls.Add(button14);
+            Controls.Add(button13);
+            Controls.Add(button12);
+            Controls.Add(button11);
+            Controls.Add(button10);
+            Controls.Add(button9);
+            Controls.Add(button8);
+            Controls.Add(button7);
+            Controls.Add(button6);
+            Controls.Add(button5);
+            Controls.Add(button4);
+            Controls.Add(button3);
+            Controls.Add(button2);
+            Controls.Add(button1);
+            Controls.Add(pictureBox4);
+            Controls.Add(pictureBox3);
+            Controls.Add(pictureBox2);
+            Controls.Add(pictureBox1);
+            Name = "Main";
+            Text = "4 Pictures 1 Answer";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -301,5 +322,7 @@
         private Button button15;
         private Label label1;
         private Label label2;
+        private Label labelLevelNumber;
+        private Label labelMoneyNumber;
     }
 }

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace _4pictures1word.models
 {
+    [Serializable]
     internal class Palabra
     {
         private string word;

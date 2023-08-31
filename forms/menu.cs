@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _4pictures1word.testdata;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,11 +16,14 @@ namespace _4pictures1word.forms
         public menu()
         {
             InitializeComponent();
+            //solo debugging y ya
+            testingGame.Serializewords();
+            testingGame.Serializestats();
         }
 
         private void buttonJugar_Click(object sender, EventArgs e)
         {
-            main formsito = main.GetInstance();
+            Main formsito = Main.GetInstance();
             formsito.Show();
             formsito.BringToFront();
             formsito.Focus();

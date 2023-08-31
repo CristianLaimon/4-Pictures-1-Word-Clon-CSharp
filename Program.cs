@@ -16,8 +16,7 @@ namespace _4pictures1word
             Startup.CheckDirectories();
 
 
-            //solo debugging y ya
-            testingGame.testlevel();
+
         }
     }
 }
