@@ -10,9 +10,11 @@ namespace _4pictures1word.krsutils
 {
     public class gameMachine
     {
-        public static Palabra RandomWord()
+        public static Palabra[] RandomWord()
         {
+            Palabra[] repertorio = JsonManager.GetJSONwords();
 
+            return repertorio;
         }
     }
 }

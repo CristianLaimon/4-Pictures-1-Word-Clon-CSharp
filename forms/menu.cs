@@ -16,9 +16,6 @@ namespace _4pictures1word.forms
         public menu()
         {
             InitializeComponent();
-            //solo debugging y ya
-            JsonManager.Serializewords();
-            JsonManager.Serializestats();
         }
 
         private void buttonJugar_Click(object sender, EventArgs e)

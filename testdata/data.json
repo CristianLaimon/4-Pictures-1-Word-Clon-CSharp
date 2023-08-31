@@ -7,6 +7,26 @@
       "images\\zorro_3",
       "images\\zorro_4"
     ],
-    "Word": "Felicidad"
+    "Word": "ZORRO"
+  },
+  {
+    "Resolved": false,
+    "Imagespath": [
+      "images\\calma_1",
+      "images\\calma_2",
+      "images\\calma_3",
+      "images\\calma_4"
+    ],
+    "Word": "CALMA"
+  },
+  {
+    "Resolved": false,
+    "Imagespath": [
+      "images\\aventura_1",
+      "images\\aventura_2",
+      "images\\aventura_3",
+      "images\\aventura_4"
+    ],
+    "Word": "AVENTURA"
   }
 ]
