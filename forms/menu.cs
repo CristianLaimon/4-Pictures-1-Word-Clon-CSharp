@@ -20,10 +20,11 @@ namespace _4pictures1word.forms
 
         private void buttonJugar_Click(object sender, EventArgs e)
         {
-            Main formsito = Main.GetInstance();
+            Main formsito = new Main();
             formsito.Show();
             formsito.BringToFront();
             formsito.Focus();
+            this.Hide();
         }
 
         private void buttonSalir_Click(object sender, EventArgs e)

@@ -98,7 +98,6 @@
             button1.TabIndex = 4;
             button1.Text = "char";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -135,7 +134,6 @@
             button5.TabIndex = 8;
             button5.Text = "char";
             button5.UseVisualStyleBackColor = true;
-            button5.Click += button5_Click;
             // 
             // button6
             // 
@@ -271,6 +269,7 @@
             buttonMenu.TabIndex = 23;
             buttonMenu.Text = "Volver al menú";
             buttonMenu.UseVisualStyleBackColor = true;
+            buttonMenu.Click += buttonMenu_Click;
             // 
             // Main
             // 
@@ -303,6 +302,7 @@
             Controls.Add(pictureBox1);
             Name = "Main";
             Text = "4 Pictures 1 Answer";
+            FormClosed += Main_FormClosed;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
