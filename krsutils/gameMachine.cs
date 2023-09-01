@@ -21,13 +21,15 @@ namespace _4pictures1word.krsutils
 
         public static string RandomWord()
         {
-            Random randomizer = new Random();
             Palabra[] repertorio = JsonManager.GetJSONwords();
+            Random randomizer = new Random();
             int totalRepertorio = repertorio.Length;
             int selectedIndex = randomizer.Next(0, totalRepertorio);
-            
 
             return repertorio[selectedIndex].Word;
+ 
+            
+
         }
 
 
