@@ -27,9 +27,11 @@ namespace _4pictures1word.krsutils
             return output;
         }
 
-        public static void UpdateJSON()
-        {
+        //public static void UpdateJSONwords(Palabra[] updatedWords)
+        //{
+            
 
-        }
+
+        //}
     }
 }

@@ -25,8 +25,13 @@ namespace _4pictures1word.krsutils
             Random randomizer = new Random();
             int totalRepertorio = repertorio.Length;
             int selectedIndex = randomizer.Next(0, totalRepertorio);
-
-            return repertorio[selectedIndex].Word;
+            
+            //if(repertorio[selectedIndex].Resolved == false)
+            //{
+            //    repertorio[selectedIndex].Resolved = true;
+            //}
+            
+                return repertorio[selectedIndex].Word;
  
             
 
