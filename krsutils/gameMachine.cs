@@ -8,11 +8,16 @@ using System.Threading.Tasks;
 
 namespace _4pictures1word.krsutils
 {
-    public class gameMachine
+    public class GameMachine
     {
-        private static List<char> alphabet = Enumerable.Range(65, 26).Select(letter => (Char)letter).Append('Ñ').ToList();
+        private List<char> alphabet;
 
-        public static List<char> Alphabet { get => alphabet; }
+
+        public GameMachine() 
+        {
+            alphabet = Enumerable.Range(65, 26).Select(letter => (Char)letter).Append('Ñ').ToList();
+        }
+        public List<char> Alphabet { get => alphabet; }
 
         public static string RandomWord()
         {
@@ -20,6 +25,7 @@ namespace _4pictures1word.krsutils
             Palabra[] repertorio = JsonManager.GetJSONwords();
             int totalRepertorio = repertorio.Length;
             int selectedIndex = randomizer.Next(0, totalRepertorio);
+            
 
             return repertorio[selectedIndex].Word;
         }

@@ -24,10 +24,11 @@ namespace _4pictures1word
 
         private void ChangeButtons()
         {
+
             int buttonIndex;
             Random random = new Random();
-            List<Char> wordChar = gameMachine.RandomWord().ToCharArray().ToList();
-            List<Char> alphabetLore = gameMachine.Alphabet;
+            List<Char> wordChar = GameMachine.RandomWord().ToCharArray().ToList(); //TODO: Solucionar palabras repetidas
+            List<Char> alphabetLore = new GameMachine().Alphabet.ToList();
             List<Button> botonesChar = this.Controls.OfType<Button>().Where(k => k.Text == "char").ToList();
 
             for (int i = 0; i < 14; i++)
@@ -65,7 +66,8 @@ namespace _4pictures1word
 
         private void Main_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            Application.OpenForms[0].Show();
+            Application.OpenForms[0].BringToFront();
         }
     }
 }
