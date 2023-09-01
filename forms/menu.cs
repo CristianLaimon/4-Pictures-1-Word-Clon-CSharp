@@ -25,5 +25,10 @@ namespace _4pictures1word.forms
             formsito.BringToFront();
             formsito.Focus();
         }
+
+        private void buttonSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -46,11 +46,12 @@
             button12 = new Button();
             button13 = new Button();
             button14 = new Button();
-            button15 = new Button();
+            buttonHint = new Button();
             label1 = new Label();
             label2 = new Label();
             labelLevelNumber = new Label();
             labelMoneyNumber = new Label();
+            buttonMenu = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -95,7 +96,7 @@
             button1.Name = "button1";
             button1.Size = new Size(58, 57);
             button1.TabIndex = 4;
-            button1.Text = "button1";
+            button1.Text = "char";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
@@ -105,7 +106,7 @@
             button2.Name = "button2";
             button2.Size = new Size(58, 57);
             button2.TabIndex = 5;
-            button2.Text = "button2";
+            button2.Text = "char";
             button2.UseVisualStyleBackColor = true;
             // 
             // button3
@@ -114,7 +115,7 @@
             button3.Name = "button3";
             button3.Size = new Size(58, 57);
             button3.TabIndex = 6;
-            button3.Text = "button3";
+            button3.Text = "char";
             button3.UseVisualStyleBackColor = true;
             // 
             // button4
@@ -123,7 +124,7 @@
             button4.Name = "button4";
             button4.Size = new Size(58, 57);
             button4.TabIndex = 7;
-            button4.Text = "button4";
+            button4.Text = "char";
             button4.UseVisualStyleBackColor = true;
             // 
             // button5
@@ -132,8 +133,9 @@
             button5.Name = "button5";
             button5.Size = new Size(58, 57);
             button5.TabIndex = 8;
-            button5.Text = "button5";
+            button5.Text = "char";
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // button6
             // 
@@ -141,7 +143,7 @@
             button6.Name = "button6";
             button6.Size = new Size(58, 57);
             button6.TabIndex = 9;
-            button6.Text = "button6";
+            button6.Text = "char";
             button6.UseVisualStyleBackColor = true;
             // 
             // button7
@@ -150,7 +152,7 @@
             button7.Name = "button7";
             button7.Size = new Size(58, 57);
             button7.TabIndex = 10;
-            button7.Text = "button7";
+            button7.Text = "char";
             button7.UseVisualStyleBackColor = true;
             // 
             // button8
@@ -159,7 +161,7 @@
             button8.Name = "button8";
             button8.Size = new Size(58, 57);
             button8.TabIndex = 11;
-            button8.Text = "button8";
+            button8.Text = "char";
             button8.UseVisualStyleBackColor = true;
             // 
             // button9
@@ -168,7 +170,7 @@
             button9.Name = "button9";
             button9.Size = new Size(58, 57);
             button9.TabIndex = 12;
-            button9.Text = "button9";
+            button9.Text = "char";
             button9.UseVisualStyleBackColor = true;
             // 
             // button10
@@ -177,7 +179,7 @@
             button10.Name = "button10";
             button10.Size = new Size(58, 57);
             button10.TabIndex = 13;
-            button10.Text = "button10";
+            button10.Text = "char";
             button10.UseVisualStyleBackColor = true;
             // 
             // button11
@@ -186,7 +188,7 @@
             button11.Name = "button11";
             button11.Size = new Size(58, 57);
             button11.TabIndex = 14;
-            button11.Text = "button11";
+            button11.Text = "char";
             button11.UseVisualStyleBackColor = true;
             // 
             // button12
@@ -195,7 +197,7 @@
             button12.Name = "button12";
             button12.Size = new Size(58, 57);
             button12.TabIndex = 15;
-            button12.Text = "button12";
+            button12.Text = "char";
             button12.UseVisualStyleBackColor = true;
             // 
             // button13
@@ -204,7 +206,7 @@
             button13.Name = "button13";
             button13.Size = new Size(58, 57);
             button13.TabIndex = 16;
-            button13.Text = "button13";
+            button13.Text = "char";
             button13.UseVisualStyleBackColor = true;
             // 
             // button14
@@ -213,17 +215,17 @@
             button14.Name = "button14";
             button14.Size = new Size(58, 57);
             button14.TabIndex = 17;
-            button14.Text = "button14";
+            button14.Text = "char";
             button14.UseVisualStyleBackColor = true;
             // 
-            // button15
+            // buttonHint
             // 
-            button15.Location = new Point(555, 555);
-            button15.Name = "button15";
-            button15.Size = new Size(76, 119);
-            button15.TabIndex = 18;
-            button15.Text = "¿Ayuda? Coste = 15 ";
-            button15.UseVisualStyleBackColor = true;
+            buttonHint.Location = new Point(555, 555);
+            buttonHint.Name = "buttonHint";
+            buttonHint.Size = new Size(76, 119);
+            buttonHint.TabIndex = 18;
+            buttonHint.Text = "¿Ayuda? Coste = 15 ";
+            buttonHint.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -261,16 +263,26 @@
             labelMoneyNumber.TabIndex = 22;
             labelMoneyNumber.Text = "numerodinero";
             // 
+            // buttonMenu
+            // 
+            buttonMenu.Location = new Point(555, 690);
+            buttonMenu.Name = "buttonMenu";
+            buttonMenu.Size = new Size(126, 29);
+            buttonMenu.TabIndex = 23;
+            buttonMenu.Text = "Volver al menú";
+            buttonMenu.UseVisualStyleBackColor = true;
+            // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(718, 731);
+            Controls.Add(buttonMenu);
             Controls.Add(labelMoneyNumber);
             Controls.Add(labelLevelNumber);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(button15);
+            Controls.Add(buttonHint);
             Controls.Add(button14);
             Controls.Add(button13);
             Controls.Add(button12);
@@ -319,10 +331,11 @@
         private Button button12;
         private Button button13;
         private Button button14;
-        private Button button15;
+        private Button buttonHint;
         private Label label1;
         private Label label2;
         private Label labelLevelNumber;
         private Label labelMoneyNumber;
+        private Button buttonMenu;
     }
 }

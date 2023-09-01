@@ -35,6 +35,7 @@
             button4 = new Button();
             button5 = new Button();
             button6 = new Button();
+            buttonSalir = new Button();
             SuspendLayout();
             // 
             // label1
@@ -101,11 +102,22 @@
             button6.Text = "Ajustes";
             button6.UseVisualStyleBackColor = true;
             // 
+            // buttonSalir
+            // 
+            buttonSalir.Location = new Point(269, 596);
+            buttonSalir.Name = "buttonSalir";
+            buttonSalir.Size = new Size(94, 29);
+            buttonSalir.TabIndex = 7;
+            buttonSalir.Text = "Salir";
+            buttonSalir.UseVisualStyleBackColor = true;
+            buttonSalir.Click += buttonSalir_Click;
+            // 
             // menu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(390, 591);
+            ClientSize = new Size(390, 646);
+            Controls.Add(buttonSalir);
             Controls.Add(button6);
             Controls.Add(button5);
             Controls.Add(button4);
@@ -128,5 +140,6 @@
         private Button button4;
         private Button button5;
         private Button button6;
+        private Button buttonSalir;
     }
 }
