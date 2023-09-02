@@ -6,7 +6,7 @@ namespace _4pictures1word
 {
     public partial class Main : Form
     {
-        private static Stats statsitos;
+        private Stats statsitos;
         private byte indexLetter;
         private List<Button> botonesChar;
         private List<Button> botonesLetter;
@@ -56,7 +56,7 @@ namespace _4pictures1word
             int buttonIndex;
             List<Char> wordCopy = new List<Char>(wordChar);//Guardo una copia para evitar lo anterior
             Random random = new Random();
-            List<Char> alphabetLore = new GameMachine().Alphabet.ToList();
+            List<Char> alphabetLore = new List<Char>(GameMachine.Alphabet);
             List<Button> botonesChar = this.Controls.OfType<Button>().Where(k => k.Text == "char").ToList();
 
             for (int i = 0; i < 14; i++)

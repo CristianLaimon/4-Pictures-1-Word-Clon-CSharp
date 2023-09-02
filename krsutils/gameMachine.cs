@@ -10,14 +10,9 @@ namespace _4pictures1word.krsutils
 {
     public class GameMachine
     {
-        private List<char> alphabet;
+        private static List<char> alphabet = Enumerable.Range(65, 26).Select(letter => (Char)letter).Append('Ñ').ToList();
 
-
-        public GameMachine() 
-        {
-            alphabet = Enumerable.Range(65, 26).Select(letter => (Char)letter).Append('Ñ').ToList();
-        }
-        public List<char> Alphabet { get => alphabet; }
+        public static List<char> Alphabet { get => alphabet; }
 
         public static string RandomWord()
         {
