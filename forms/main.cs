@@ -19,7 +19,7 @@ namespace _4pictures1word
             InitializeComponent();
             CargarForm();
             CargarNivel();
-            AddSharedEvent();
+            
             EnableLetterButtons();
         }
 
@@ -41,6 +41,7 @@ namespace _4pictures1word
         {
             
             botonesChar = Controls.OfType<Button>().Where(k => k.Text == "char").ToList();
+            AddSharedEvent();
             botonesLetter = this.Controls.OfType<Button>().Where(k => k.Text == "").OrderBy(k => Convert.ToInt16(k.Tag)).ToList();
             this.StartPosition = FormStartPosition.CenterScreen;
         }
