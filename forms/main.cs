@@ -1,6 +1,5 @@
 using _4pictures1word.krsutils;
 using _4pictures1word.models;
-using System.Collections.Generic;
 using System.Text;
 
 namespace _4pictures1word
@@ -34,9 +33,8 @@ namespace _4pictures1word
             AddImages();
             ChangeButtons();
             LimpiarButtons();
-
-
         }
+
         private void CargarForm()
         {
             //Solo se ocupa añadir una vez los eventos a los BOTONES char y después reutilizar
@@ -61,7 +59,7 @@ namespace _4pictures1word
 
                     if (w.Word == JSONWord.Word && w.Resolved == false && JSONWord.Resolved == false)
                     {
-                        found = true; 
+                        found = true;
                         break;
                         //Se encontrï¿½!
                     }
@@ -71,16 +69,13 @@ namespace _4pictures1word
                     {
                         todasResueltas = false;
                     }
-
                 }
 
-                if(todasResueltas)//Para evitar while infinito cuando todas estï¿½n resueltas
+                if (todasResueltas)//Para evitar while infinito cuando todas estï¿½n resueltas
                 {
                     break;
                 }
-
             }
-            
         }
 
         private void AddSharedEvent()
@@ -154,7 +149,7 @@ namespace _4pictures1word
 
         #endregion ChangeButtons()
 
-        #region AddRemoveLetters()
+        #region Handlers;IMPORTANT
 
         private void SharedButton_Click(object sender, EventArgs e)
         {
@@ -184,7 +179,7 @@ namespace _4pictures1word
                 if (JSONWord.Word == palabraCorrecta.ToString())
                 {
                     //testing solamente
-                    MessageBox.Show("ES CORRECTO"); 
+                    MessageBox.Show("ES CORRECTO");
                     JsonManager.UpdateJSONword(JSONWord);
                     CargarNivel();
                 }
@@ -215,7 +210,7 @@ namespace _4pictures1word
             }
         }
 
-        #endregion AddRemoveLetters()
+        #endregion
 
         #region CloseForm Logic
 
@@ -233,7 +228,5 @@ namespace _4pictures1word
         }
 
         #endregion CloseForm Logic
-
-
     }
 }
