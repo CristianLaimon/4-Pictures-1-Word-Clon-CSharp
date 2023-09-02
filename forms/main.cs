@@ -19,7 +19,6 @@ namespace _4pictures1word
             InitializeComponent();
             CargarForm();
             CargarNivel();
-            ChangeButtons();
             AddSharedEvent();
             EnableLetterButtons();
         }
@@ -33,12 +32,15 @@ namespace _4pictures1word
             ChooseWord();
             AddImages();
 
+            ChangeButtons();
+
+
 
         }
         private void CargarForm()
         {
             
-            botonesChar = this.Controls.OfType<Button>().Where(k => k.Text == "char").ToList();
+            botonesChar = Controls.OfType<Button>().Where(k => k.Text == "char").ToList();
             botonesLetter = this.Controls.OfType<Button>().Where(k => k.Text == "").OrderBy(k => Convert.ToInt16(k.Tag)).ToList();
             this.StartPosition = FormStartPosition.CenterScreen;
         }
@@ -118,7 +120,7 @@ namespace _4pictures1word
             List<Char> wordChar = JSONWord.Word.ToCharArray().ToList();//Guardo una copia para evitar lo anterior
             Random random = new Random();
             List<Char> alphabetLore = new List<Char>(GameMachine.Alphabet);
-            List<Button> botonesChar = this.Controls.OfType<Button>().Where(k => k.Text == "char").ToList();
+            //List<Button> botonesChar = this.Controls.OfType<Button>().Where(k => k.Text == "char").ToList();
 
             for (int i = 0; i < 14; i++)
             {
