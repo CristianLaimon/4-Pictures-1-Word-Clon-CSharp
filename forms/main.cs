@@ -7,19 +7,20 @@ namespace _4pictures1word
     public partial class Main : Form
     {
         private static Stats statsitos;
-        private  byte indexLetter;
-        private  List<Button> botonesChar;
-        private  List<Button> botonesLetter;
-        private  List<Char> wordChar;
+        private byte indexLetter;
+        private List<Button> botonesChar;
+        private List<Button> botonesLetter;
+        private List<Char> wordChar;
+        private byte numLetrasStatic;
 
         #region CargarForm
         public Main()
         {
             InitializeComponent();
             Cargar();
+            AddSharedEvent();
             EnableLetterButtons();
             ChangeButtons();
-            AddSharedEvent();
         }
 
         private void Cargar()
@@ -30,8 +31,8 @@ namespace _4pictures1word
             botonesChar = this.Controls.OfType<Button>().Where(k => k.Text == "char").ToList();
             botonesLetter = this.Controls.OfType<Button>().Where(k => k.Text == "").OrderBy(k => Convert.ToInt16(k.Tag)).ToList();
             indexLetter = 0;
-            wordChar = GameMachine.RandomWord().ToCharArray().ToList(); //TODO: Solucionar palabras repetidas
-
+            wordChar = GameMachine.RandomWord().ToCharArray().ToList(); //TODO: Solucionar palabras repetidas. Es muy importante esta línea, por eso va aquí
+            numLetrasStatic = (byte)wordChar.Count();
         }
         private void AddSharedEvent()
         {
@@ -43,7 +44,7 @@ namespace _4pictures1word
 
         private void EnableLetterButtons()
         {
-            for (int i = 0; i < wordChar.Count; i++)
+            for (int i = 0; i < numLetrasStatic; i++)
             {
                 botonesLetter[i].Enabled = true;
             }
@@ -53,7 +54,7 @@ namespace _4pictures1word
         #region ChangeButtons()
         private void ChangeButtons()
         {
-
+            //En este método wordChar se vaciará y quedará en 0 al finalizar...
             int buttonIndex;
             Random random = new Random();
             List<Char> alphabetLore = new GameMachine().Alphabet.ToList();
@@ -91,7 +92,7 @@ namespace _4pictures1word
             Button botonClickeado = (Button)sender;
 
             //añadir
-            if (indexLetter < wordChar.Count)
+            if (indexLetter < numLetrasStatic)
             {
                 botonesLetter[indexLetter].Text = botonClickeado.Text;
                 indexLetter++;
