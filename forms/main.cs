@@ -33,6 +33,7 @@ namespace _4pictures1word
             botonesLetter = this.Controls.OfType<Button>().Where(k => k.Text == "").OrderBy(k => Convert.ToInt16(k.Tag)).ToList();
             indexLetter = 0;
             JSONWord = GameMachine.RandomWord(); //TODO: Solucionar palabras repetidas. Es muy importante esta línea, por eso va aquí
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
         private void AddSharedEvent()
         {
@@ -52,11 +53,6 @@ namespace _4pictures1word
 
         private void AddImages()
         {
-            //Image[] imgs = new Image[] { 
-            //    Image.FromFile(JSONWord.Imagespath[0]), 
-            //    Image.FromFile(JSONWord.Imagespath[1]), 
-            //    Image.FromFile(JSONWord.Imagespath[2]), 
-            //    Image.FromFile(JSONWord.Imagespath[3]) };
             byte adder = 0;
 
             foreach (PictureBox pb in this.Controls.OfType<PictureBox>())
@@ -64,8 +60,6 @@ namespace _4pictures1word
                 pb.ImageLocation = JSONWord.Imagespath[adder];
                 adder++;
             }
-
-            //No olvidar hacer dispose
         }
         #endregion
 

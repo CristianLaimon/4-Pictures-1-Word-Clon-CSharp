@@ -47,17 +47,17 @@
             // 
             // buttonJugar
             // 
-            buttonJugar.Location = new Point(137, 206);
+            buttonJugar.Location = new Point(113, 216);
             buttonJugar.Name = "buttonJugar";
-            buttonJugar.Size = new Size(94, 29);
+            buttonJugar.Size = new Size(149, 29);
             buttonJugar.TabIndex = 1;
-            buttonJugar.Text = "Jugar";
+            buttonJugar.Text = "Nueva Partida";
             buttonJugar.UseVisualStyleBackColor = true;
             buttonJugar.Click += buttonJugar_Click;
             // 
             // buttonSalir
             // 
-            buttonSalir.Location = new Point(137, 254);
+            buttonSalir.Location = new Point(133, 271);
             buttonSalir.Name = "buttonSalir";
             buttonSalir.Size = new Size(94, 29);
             buttonSalir.TabIndex = 7;
@@ -76,7 +76,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(7, 348);
+            label2.Location = new Point(12, 349);
             label2.Name = "label2";
             label2.Size = new Size(205, 20);
             label2.TabIndex = 9;
