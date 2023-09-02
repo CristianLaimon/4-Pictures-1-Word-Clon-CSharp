@@ -1,6 +1,7 @@
 using _4pictures1word.krsutils;
 using _4pictures1word.models;
 using System.CodeDom;
+using System.Drawing;
 
 namespace _4pictures1word
 {
@@ -51,7 +52,20 @@ namespace _4pictures1word
 
         private void AddImages()
         {
-            
+            //Image[] imgs = new Image[] { 
+            //    Image.FromFile(JSONWord.Imagespath[0]), 
+            //    Image.FromFile(JSONWord.Imagespath[1]), 
+            //    Image.FromFile(JSONWord.Imagespath[2]), 
+            //    Image.FromFile(JSONWord.Imagespath[3]) };
+            byte adder = 0;
+
+            foreach(PictureBox pb in this.Controls.OfType<PictureBox>())
+            {
+                pb.ImageLocation = JSONWord.Imagespath[adder];
+                adder++;
+            }
+
+            //No olvidar hacer dispose
         }
         #endregion
 
