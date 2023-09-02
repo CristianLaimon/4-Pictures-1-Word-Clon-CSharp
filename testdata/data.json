@@ -2,30 +2,30 @@
   {
     "Resolved": false,
     "Imagespath": [
-      "images\\zorro_1",
-      "images\\zorro_2",
-      "images\\zorro_3",
-      "images\\zorro_4"
+      "images\\zorro_1.jpg",
+      "images\\zorro_2.jpg",
+      "images\\zorro_3.jpg",
+      "images\\zorro_4.jpg"
     ],
     "Word": "ZORRO"
   },
   {
     "Resolved": false,
     "Imagespath": [
-      "images\\calma_1",
-      "images\\calma_2",
-      "images\\calma_3",
-      "images\\calma_4"
+      "images\\calma_1.jpg",
+      "images\\calma_2.jpg",
+      "images\\calma_3.jpg",
+      "images\\calma_4.jpg"
     ],
     "Word": "CALMA"
   },
   {
     "Resolved": false,
     "Imagespath": [
-      "images\\aventura_1",
-      "images\\aventura_2",
-      "images\\aventura_3",
-      "images\\aventura_4"
+      "images\\aventura_1.jpg",
+      "images\\aventura_2.jpg",
+      "images\\aventura_3.jpg",
+      "images\\aventura_4.jpg"
     ],
     "Word": "AVENTURA"
   }
