@@ -24,16 +24,24 @@ namespace _4pictures1word
 
         private void CargarNivel()
         {
-            indexLetter = 0;
-            statsitos = JsonManager.GetJSONstats();
-            labelLevelNumber.Text = statsitos.Level.ToString();
-            labelMoneyNumber.Text = statsitos.Money.ToString();
-            JSONWord = GameMachine.ChooseWord();
-            AddImages();
-            ChangeButtons();
-            LimpiarButtons();
-            EnableLetterButtons();
+            if(!GameMachine.CheckWin())
+            {
+                indexLetter = 0;
+                statsitos = JsonManager.GetJSONstats();
+                labelLevelNumber.Text = statsitos.Level.ToString();
+                labelMoneyNumber.Text = statsitos.Money.ToString();
+                JSONWord = GameMachine.ChooseWord();
+                AddImages();
+                ChangeButtons();
+                LimpiarButtons();
+                EnableLetterButtons();
 
+            }
+            else
+            {
+                MessageBox.Show("Has ganado");
+                this.Close();
+            }
         }
 
         private void CargarForm()

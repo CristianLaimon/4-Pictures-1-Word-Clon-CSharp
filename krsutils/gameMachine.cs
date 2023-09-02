@@ -31,7 +31,7 @@ namespace _4pictures1word.krsutils
         {
             Palabra JSONWord = null ;
             bool found = false;
-            bool todasResueltas = true;
+            bool todasResueltas = true; //Solo para evitar while infinito
 
             while (!found) //Repite mientras found == false (no se encuentre la palabra)
             {
@@ -55,7 +55,7 @@ namespace _4pictures1word.krsutils
                     }
                 }
 
-                if (todasResueltas)//Para evitar while infinito cuando todas estï¿½n resueltas
+                if (todasResueltas)
                 {
                     break;
                 }
@@ -63,5 +63,23 @@ namespace _4pictures1word.krsutils
 
             return JSONWord;
         }
+        public static bool CheckWin()
+        {
+            Palabra[] palabras = JsonManager.GetJSONwords();
+
+            bool win = true;
+
+            foreach( Palabra p in palabras)
+            {
+                if(p.Resolved == false)
+                {
+                    win = false;
+                }
+            }
+
+            return win;
+        }
     }
+
+    
 }
