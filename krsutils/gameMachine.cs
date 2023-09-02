@@ -12,23 +12,18 @@ namespace _4pictures1word.krsutils
     {
         private static List<char> alphabet = Enumerable.Range(65, 26).Select(letter => (Char)letter).Append('Ñ').ToList();
 
+        private static Palabra[] repertorioActual;
         public static List<char> Alphabet { get => alphabet; }
+        public static Palabra[] TotalWords { get => repertorioActual; set => repertorioActual = value; }
 
         public static Palabra RandomWord()
         {
             Palabra[] repertorio = JsonManager.GetJSONwords();
+            TotalWords = repertorio;
             Random randomizer = new Random();
             int totalRepertorio = repertorio.Length;
             int selectedIndex = randomizer.Next(0, totalRepertorio);
-            
-            //if(repertorio[selectedIndex].Resolved == false)
-            //{
-            //    repertorio[selectedIndex].Resolved = true;
-            //}
-            
-                return repertorio[selectedIndex];
- 
-            
+            return repertorio[selectedIndex];
 
         }
 

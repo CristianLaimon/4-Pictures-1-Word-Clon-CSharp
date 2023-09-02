@@ -1,7 +1,5 @@
 using _4pictures1word.krsutils;
 using _4pictures1word.models;
-using System.CodeDom;
-using System.Drawing;
 using System.Text;
 
 namespace _4pictures1word
@@ -15,17 +13,19 @@ namespace _4pictures1word
         private Palabra JSONWord;
 
         #region CargarForm
+
         public Main()
         {
             InitializeComponent();
-            Cargar();
+            CargarForm();
+            ChooseWord();
             ChangeButtons();
             AddSharedEvent();
             AddImages();
             EnableLetterButtons();
         }
 
-        private void Cargar()
+        private void CargarForm()
         {
             statsitos = JsonManager.GetJSONstats();
             labelLevelNumber.Text = statsitos.Level.ToString();
@@ -33,9 +33,33 @@ namespace _4pictures1word
             botonesChar = this.Controls.OfType<Button>().Where(k => k.Text == "char").ToList();
             botonesLetter = this.Controls.OfType<Button>().Where(k => k.Text == "").OrderBy(k => Convert.ToInt16(k.Tag)).ToList();
             indexLetter = 0;
-            JSONWord = GameMachine.RandomWord(); //TODO: Solucionar palabras repetidas. Es muy importante esta línea, por eso va aquí
             this.StartPosition = FormStartPosition.CenterScreen;
         }
+
+        private void ChooseWord()
+        {
+            //bool found = false ;
+            //byte detectWin = 0;
+
+            //while(!found) //Repite mientras found == false (no se encuentre la palabra)
+            //{
+            //    JSONWord = GameMachine.RandomWord();
+
+            //    for (int i = 0; i < GameMachine.TotalWords.Length; i++)
+            //    {
+            //        Palabra w = GameMachine.TotalWords[i];
+
+            //        if (w.Word == JSONWord.Word && w.Resolved == false && JSONWord.Resolved == false)
+            //        {
+
+            //        }
+
+            //    }
+
+            //}
+            JSONWord = GameMachine.RandomWord();
+        }
+
         private void AddSharedEvent()
         {
             foreach (Button botonChar in botonesChar)
@@ -62,9 +86,11 @@ namespace _4pictures1word
                 adder++;
             }
         }
-        #endregion
+
+        #endregion CargarForm
 
         #region ChangeButtons()
+
         private void ChangeButtons()
         {
             //En este método wordChar se vaciará y quedará en 0 al finalizar...
@@ -97,9 +123,11 @@ namespace _4pictures1word
                 botonesChar.RemoveAt(buttonIndex);
             }
         }
-        #endregion
+
+        #endregion ChangeButtons()
 
         #region AddRemoveLetters()
+
         private void SharedButton_Click(object sender, EventArgs e)
         {
             Button botonClickeado = (Button)sender;
@@ -114,12 +142,11 @@ namespace _4pictures1word
             //Inhabilitar botón clickeado
             botonClickeado.Enabled = false;
 
-            //Verificar última letra de la palabra 
+            //Verificar última letra de la palabra
             if (botonesLetter.Where(x => x.Enabled).OrderBy(x => Convert.ToInt32(x.Tag)).Last().Text != "")
             {
                 List<Button> enableds = botonesLetter.Where(x => x.Enabled).OrderBy(x => Convert.ToInt32(x.Tag)).ToList();
                 StringBuilder palabraCorrecta = new StringBuilder();
-
 
                 foreach (Button b in enableds)
                 {
@@ -129,15 +156,16 @@ namespace _4pictures1word
                 if (JSONWord.Word == palabraCorrecta.ToString())
                 {
                     //testing solamente
-                    MessageBox.Show("ES CORRECTO"); //TODO: Poner la siguiente palabra
+                    MessageBox.Show("ES CORRECTO"); 
+                    JsonManager.UpdateJSONword(JSONWord);
                 }
                 else
                 {
                     MessageBox.Show("NO ES ESE XDD");
                 }
-
             }
         }
+
         private void buttonEliminarLetters_Click(object sender, EventArgs e)
         {
             indexLetter = 0;
@@ -152,9 +180,11 @@ namespace _4pictures1word
                 button.Enabled = true;
             }
         }
-        #endregion
+
+        #endregion AddRemoveLetters()
 
         #region CloseForm Logic
+
         private void buttonMenu_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -167,12 +197,9 @@ namespace _4pictures1word
             Application.OpenForms[0].Show();
             Application.OpenForms[0].BringToFront();
         }
-        #endregion
 
-        private void Reset() //TODO: THIS
-        {
-            //cambiarpalabra
-            //cambiarimagenes
-        }
+        #endregion CloseForm Logic
+
+
     }
 }

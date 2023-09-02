@@ -27,11 +27,24 @@ namespace _4pictures1word.krsutils
             return output;
         }
 
-        //public static void UpdateJSONwords(Palabra[] updatedWords)
-        //{
-            
+        public static void UpdateJSONword(Palabra updatedWord)
+        {
+            //Para este punto ya debería de estar actualizado el repertorio con la palabra ya hecha
+            updatedWord.Resolved = true;
+
+            for (int i = 0; i < GameMachine.TotalWords.Length; i++)
+            {
+                if (GameMachine.TotalWords[i] == updatedWord)
+                {
+                    GameMachine.TotalWords[i] = updatedWord;
+                    break;
+                }
+            }
+
+            string inputJSON = JsonConvert.SerializeObject(GameMachine.TotalWords);
+            File.WriteAllText(@"testdata\data.json", inputJSON);
 
 
-        //}
+        }
     }
 }
