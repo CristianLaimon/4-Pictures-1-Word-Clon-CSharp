@@ -11,7 +11,6 @@ namespace _4pictures1word
         private List<Button> botonesChar;
         private List<Button> botonesLetter;
         private List<Char> wordChar;
-        private byte numLetrasStatic;
 
         #region CargarForm
         public Main()
@@ -32,7 +31,6 @@ namespace _4pictures1word
             botonesLetter = this.Controls.OfType<Button>().Where(k => k.Text == "").OrderBy(k => Convert.ToInt16(k.Tag)).ToList();
             indexLetter = 0;
             wordChar = GameMachine.RandomWord().ToCharArray().ToList(); //TODO: Solucionar palabras repetidas. Es muy importante esta línea, por eso va aquí
-            numLetrasStatic = (byte)wordChar.Count();
         }
         private void AddSharedEvent()
         {
@@ -44,7 +42,7 @@ namespace _4pictures1word
 
         private void EnableLetterButtons()
         {
-            for (int i = 0; i < numLetrasStatic; i++)
+            for (int i = 0; i < wordChar.Count; i++)
             {
                 botonesLetter[i].Enabled = true;
             }
@@ -56,6 +54,7 @@ namespace _4pictures1word
         {
             //En este método wordChar se vaciará y quedará en 0 al finalizar...
             int buttonIndex;
+            List<Char> wordCopy = new List<Char>(wordChar);//Guardo una copia para evitar lo anterior
             Random random = new Random();
             List<Char> alphabetLore = new GameMachine().Alphabet.ToList();
             List<Button> botonesChar = this.Controls.OfType<Button>().Where(k => k.Text == "char").ToList();
@@ -82,6 +81,8 @@ namespace _4pictures1word
 
                 botonesChar.RemoveAt(buttonIndex);
             }
+
+            wordChar = wordCopy; //Asigno la misma referencia
         }
         #endregion
 
@@ -92,7 +93,7 @@ namespace _4pictures1word
             Button botonClickeado = (Button)sender;
 
             //añadir
-            if (indexLetter < numLetrasStatic)
+            if (indexLetter < wordChar.Count)
             {
                 botonesLetter[indexLetter].Text = botonClickeado.Text;
                 indexLetter++;
