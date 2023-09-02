@@ -18,23 +18,29 @@ namespace _4pictures1word
         {
             InitializeComponent();
             CargarForm();
-            ChooseWord();
+            CargarNivel();
             ChangeButtons();
             AddSharedEvent();
-            AddImages();
             EnableLetterButtons();
         }
 
-        private void CargarForm()
+        private void CargarNivel()
         {
+            indexLetter = 0;
             statsitos = JsonManager.GetJSONstats();
             labelLevelNumber.Text = statsitos.Level.ToString();
             labelMoneyNumber.Text = statsitos.Money.ToString();
+            ChooseWord();
+            AddImages();
+
+
+        }
+        private void CargarForm()
+        {
+            
             botonesChar = this.Controls.OfType<Button>().Where(k => k.Text == "char").ToList();
             botonesLetter = this.Controls.OfType<Button>().Where(k => k.Text == "").OrderBy(k => Convert.ToInt16(k.Tag)).ToList();
-            indexLetter = 0;
             this.StartPosition = FormStartPosition.CenterScreen;
-            ChooseWord();
         }
 
         private void ChooseWord()
@@ -172,6 +178,7 @@ namespace _4pictures1word
                     //testing solamente
                     MessageBox.Show("ES CORRECTO"); 
                     JsonManager.UpdateJSONword(JSONWord);
+                    CargarNivel();
                 }
                 else
                 {
