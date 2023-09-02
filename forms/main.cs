@@ -84,10 +84,31 @@ namespace _4pictures1word
         #endregion
 
 
+        #region AddRemoveLetters()
+        private void SharedButton_Click(object sender, EventArgs e)
+        {
+            Button botonClickeado = (Button)sender;
+
+            //añadir
+            if (indexLetter < wordChar.Count)
+            {
+                botonesLetter[indexLetter].Text = botonClickeado.Text;
+                indexLetter++;
+            }
 
 
         }
+        private void buttonEliminarLetters_Click(object sender, EventArgs e)
+        {
+            indexLetter = 0;
+            foreach (Button button in botonesLetter)
+            {
+                button.Text = "";
+            }
+        }
+        #endregion
 
+        #region CloseForm Logic
         private void buttonMenu_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -100,5 +121,7 @@ namespace _4pictures1word
             Application.OpenForms[0].Show();
             Application.OpenForms[0].BringToFront();
         }
+        #endregion
+
     }
 }
