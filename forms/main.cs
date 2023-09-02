@@ -19,10 +19,10 @@ namespace _4pictures1word
         {
             InitializeComponent();
             Cargar();
+            ChangeButtons();
             AddSharedEvent();
             AddImages();
             EnableLetterButtons();
-            ChangeButtons();
         }
 
         private void Cargar()
@@ -111,8 +111,11 @@ namespace _4pictures1word
                 indexLetter++;
             }
 
+            //Inhabilitar botón clickeado
+            botonClickeado.Enabled = false;
+
             //Verificar última letra de la palabra 
-            if(botonesLetter.Where(x => x.Enabled).OrderBy(x => Convert.ToInt32(x.Tag)).Last().Text != "")
+            if (botonesLetter.Where(x => x.Enabled).OrderBy(x => Convert.ToInt32(x.Tag)).Last().Text != "")
             {
                 List<Button> enableds = botonesLetter.Where(x => x.Enabled).OrderBy(x => Convert.ToInt32(x.Tag)).ToList();
                 StringBuilder palabraCorrecta = new StringBuilder();
@@ -120,13 +123,13 @@ namespace _4pictures1word
 
                 foreach (Button b in enableds)
                 {
-                    palabraCorrecta.Append(b.Text); //me da cosa que haya espacios o algo
+                    palabraCorrecta.Append(b.Text);
                 }
 
                 if (JSONWord.Word == palabraCorrecta.ToString())
                 {
                     //testing solamente
-                    MessageBox.Show("ES CORRECTO");
+                    MessageBox.Show("ES CORRECTO"); //TODO: Poner la siguiente palabra
                 }
                 else
                 {
@@ -138,16 +141,16 @@ namespace _4pictures1word
         private void buttonEliminarLetters_Click(object sender, EventArgs e)
         {
             indexLetter = 0;
+
             foreach (Button button in botonesLetter)
             {
                 button.Text = "";
             }
-        }
 
-        private void CorrectAnswerChecker()
-        {
-            //al momento de poner la letra
-           
+            foreach (Button button in botonesChar)
+            {
+                button.Enabled = true;
+            }
         }
         #endregion
 
@@ -166,5 +169,10 @@ namespace _4pictures1word
         }
         #endregion
 
+        private void Reset() //TODO: THIS
+        {
+            //cambiarpalabra
+            //cambiarimagenes
+        }
     }
 }

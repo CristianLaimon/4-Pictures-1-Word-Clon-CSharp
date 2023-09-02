@@ -144,7 +144,7 @@
             button5.Location = new Point(351, 588);
             button5.Name = "button5";
             button5.Size = new Size(58, 57);
-            button5.TabIndex = 8;
+            button5.TabIndex = 7;
             button5.Text = "char";
             button5.UseVisualStyleBackColor = true;
             // 
