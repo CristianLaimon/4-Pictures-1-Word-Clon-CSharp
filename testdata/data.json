@@ -28,5 +28,105 @@
       "images\\aventura_4.jpg"
     ],
     "Word": "AVENTURA"
+  },
+  {
+    "Resolved": false,
+    "Imagespath": [
+      "images\\lago_1.jfif",
+      "images\\lago_2.jfif",
+      "images\\lago_3.jfif",
+      "images\\lago_4.jfif"
+    ],
+    "Word": "LAGO"
+  },
+  {
+    "Resolved": false,
+    "Imagespath": [
+      "images\\luna_1.jfif",
+      "images\\luna_2.jfif",
+      "images\\luna_3.jfif",
+      "images\\luna_4.jfif"
+    ],
+    "Word": "LUNA"
+  },
+  {
+    "Resolved": false,
+    "Imagespath": [
+      "images\\nieve_1.jfif",
+      "images\\nieve_2.jfif",
+      "images\\nieve_3.jfif",
+      "images\\nieve_4.jfif"
+    ],
+    "Word": "NIEVE"
+  },
+  {
+    "Resolved": false,
+    "Imagespath": [
+      "images\\pintura_1.jfif",
+      "images\\pintura_2.jfif",
+      "images\\pintura_3.jfif",
+      "images\\pintura_4.jfif"
+    ],
+    "Word": "PINTURA"
+  },
+  {
+    "Resolved": false,
+    "Imagespath": [
+      "images\\pixelart_1.jfif",
+      "images\\pixelart_2.jfif",
+      "images\\pixelart_3.jfif",
+      "images\\pixelart_4.jfif"
+    ],
+    "Word": "PIXELART"
+  },
+  {
+    "Resolved": false,
+    "Imagespath": [
+      "images\\programa_1.jfif",
+      "images\\programa_2.jfif",
+      "images\\programa_3.jfif",
+      "images\\programa_4.jfif"
+    ],
+    "Word": "PROGRAMA"
+  },
+  {
+    "Resolved": false,
+    "Imagespath": [
+      "images\\sol_1.jfif",
+      "images\\sol_2.jfif",
+      "images\\sol_3.jfif",
+      "images\\sol_4.jfif"
+    ],
+    "Word": "SOL"
+  },
+  {
+    "Resolved": false,
+    "Imagespath": [
+      "images\\sonido_1.jfif",
+      "images\\sonido_2.jfif",
+      "images\\sonido_3.jfif",
+      "images\\sonido_4.jfif"
+    ],
+    "Word": "SONIDO"
+  },
+  {
+    "Resolved": false,
+    "Imagespath": [
+      "images\\tiempo_1.jfif",
+      "images\\tiempo_2.jfif",
+      "images\\tiempo_3.jfif",
+      "images\\tiempo_4.jfif"
+    ],
+    "Word": "TIEMPO"
+  },
+  {
+    "Resolved": false,
+    "Imagespath": [
+      "images\\viento_1.jfif",
+      "images\\viento_2.jfif",
+      "images\\viento_3.jfif",
+      "images\\viento_4.jfif"
+    ],
+    "Word": "VIENTO"
   }
 ]
