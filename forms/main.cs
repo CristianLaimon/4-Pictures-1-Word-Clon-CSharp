@@ -20,7 +20,7 @@ namespace _4pictures1word
             InitializeComponent();
             CargarForm();
             CargarNivel();
-            
+
             EnableLetterButtons();
         }
 
@@ -32,15 +32,14 @@ namespace _4pictures1word
             labelMoneyNumber.Text = statsitos.Money.ToString();
             ChooseWord();
             AddImages();
-
             ChangeButtons();
-
+            LimpiarButtons();
 
 
         }
         private void CargarForm()
         {
-            
+            //Solo se ocupa añadir una vez los eventos a los BOTONES char y después reutilizar
             botonesChar = Controls.OfType<Button>().Where(k => k.Text == "char").ToList();
             AddSharedEvent();
             botonesLetter = this.Controls.OfType<Button>().Where(k => k.Text == "").OrderBy(k => Convert.ToInt16(k.Tag)).ToList();
@@ -197,6 +196,11 @@ namespace _4pictures1word
         }
 
         private void buttonEliminarLetters_Click(object sender, EventArgs e)
+        {
+            LimpiarButtons(); //P=ara poder usar la lógica de este botón en otra parte del código
+        }
+
+        private void LimpiarButtons()
         {
             indexLetter = 0;
 
