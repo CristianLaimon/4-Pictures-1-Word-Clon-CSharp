@@ -14,7 +14,7 @@ namespace _4pictures1word.krsutils
 
         public static List<char> Alphabet { get => alphabet; }
 
-        public static string RandomWord()
+        public static Palabra RandomWord()
         {
             Palabra[] repertorio = JsonManager.GetJSONwords();
             Random randomizer = new Random();
@@ -26,7 +26,7 @@ namespace _4pictures1word.krsutils
             //    repertorio[selectedIndex].Resolved = true;
             //}
             
-                return repertorio[selectedIndex].Word;
+                return repertorio[selectedIndex];
  
             
 

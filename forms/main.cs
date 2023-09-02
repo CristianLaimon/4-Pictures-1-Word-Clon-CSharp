@@ -10,7 +10,7 @@ namespace _4pictures1word
         private byte indexLetter;
         private List<Button> botonesChar;
         private List<Button> botonesLetter;
-        private List<Char> wordChar;
+        private Palabra JSONWord;
 
         #region CargarForm
         public Main()
@@ -31,7 +31,7 @@ namespace _4pictures1word
             botonesChar = this.Controls.OfType<Button>().Where(k => k.Text == "char").ToList();
             botonesLetter = this.Controls.OfType<Button>().Where(k => k.Text == "").OrderBy(k => Convert.ToInt16(k.Tag)).ToList();
             indexLetter = 0;
-            wordChar = GameMachine.RandomWord().ToCharArray().ToList(); //TODO: Solucionar palabras repetidas. Es muy importante esta línea, por eso va aquí
+            JSONWord = GameMachine.RandomWord(); //TODO: Solucionar palabras repetidas. Es muy importante esta línea, por eso va aquí
         }
         private void AddSharedEvent()
         {
@@ -43,7 +43,7 @@ namespace _4pictures1word
 
         private void EnableLetterButtons()
         {
-            for (int i = 0; i < wordChar.Count; i++)
+            for (int i = 0; i < JSONWord.Word.Length; i++)
             {
                 botonesLetter[i].Enabled = true;
             }
@@ -51,7 +51,7 @@ namespace _4pictures1word
 
         private void AddImages()
         {
-
+            
         }
         #endregion
 
@@ -60,7 +60,7 @@ namespace _4pictures1word
         {
             //En este método wordChar se vaciará y quedará en 0 al finalizar...
             int buttonIndex;
-            List<Char> wordCopy = new List<Char>(wordChar);//Guardo una copia para evitar lo anterior
+            List<Char> wordChar = JSONWord.Word.ToCharArray().ToList();//Guardo una copia para evitar lo anterior
             Random random = new Random();
             List<Char> alphabetLore = new List<Char>(GameMachine.Alphabet);
             List<Button> botonesChar = this.Controls.OfType<Button>().Where(k => k.Text == "char").ToList();
@@ -87,8 +87,6 @@ namespace _4pictures1word
 
                 botonesChar.RemoveAt(buttonIndex);
             }
-
-            wordChar = wordCopy; //Asigno la misma referencia
         }
         #endregion
 
@@ -98,7 +96,7 @@ namespace _4pictures1word
             Button botonClickeado = (Button)sender;
 
             //añadir
-            if (indexLetter < wordChar.Count)
+            if (indexLetter < JSONWord.Word.Length)
             {
                 botonesLetter[indexLetter].Text = botonClickeado.Text;
                 indexLetter++;
