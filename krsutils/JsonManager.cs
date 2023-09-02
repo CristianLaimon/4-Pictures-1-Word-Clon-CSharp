@@ -41,7 +41,7 @@ namespace _4pictures1word.krsutils
                 }
             }
 
-            string inputJSON = JsonConvert.SerializeObject(GameMachine.TotalWords);
+            string inputJSON = JsonConvert.SerializeObject(GameMachine.TotalWords, Formatting.Indented);
             File.WriteAllText(@"testdata\data.json", inputJSON);
 
 
