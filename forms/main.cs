@@ -1,5 +1,6 @@
 using _4pictures1word.krsutils;
 using _4pictures1word.models;
+using System.Collections.Generic;
 using System.Text;
 
 namespace _4pictures1word
@@ -116,11 +117,13 @@ namespace _4pictures1word
 
         private void ChangeButtons()
         {
-            //En este método wordChar se vaciará y quedará en 0 al finalizar...
             int buttonIndex;
-            List<Char> wordChar = JSONWord.Word.ToCharArray().ToList();//Guardo una copia para evitar lo anterior
             Random random = new Random();
+
+            List<Char> wordChar = JSONWord.Word.ToCharArray().ToList();
             List<Char> alphabetLore = new List<Char>(GameMachine.Alphabet);
+
+            List<Button> copyBotonesChar = new List<Button>(botonesChar);
             //List<Button> botonesChar = this.Controls.OfType<Button>().Where(k => k.Text == "char").ToList();
 
             for (int i = 0; i < 14; i++)
@@ -145,6 +148,9 @@ namespace _4pictures1word
 
                 botonesChar.RemoveAt(buttonIndex);
             }
+
+            botonesChar = copyBotonesChar; //Para que permanezca la lista para ser usado por el botón "eliminar" en el siguiente nivel
+            copyBotonesChar = null; //Para que GC lo limpie más rápido
         }
 
         #endregion ChangeButtons()
