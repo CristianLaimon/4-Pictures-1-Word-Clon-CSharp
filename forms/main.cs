@@ -18,6 +18,7 @@ namespace _4pictures1word
             InitializeComponent();
             Cargar();
             AddSharedEvent();
+            AddImages();
             EnableLetterButtons();
             ChangeButtons();
         }
@@ -46,6 +47,11 @@ namespace _4pictures1word
             {
                 botonesLetter[i].Enabled = true;
             }
+        }
+
+        private void AddImages()
+        {
+
         }
         #endregion
 
@@ -85,7 +91,6 @@ namespace _4pictures1word
             wordChar = wordCopy; //Asigno la misma referencia
         }
         #endregion
-
 
         #region AddRemoveLetters()
         private void SharedButton_Click(object sender, EventArgs e)
