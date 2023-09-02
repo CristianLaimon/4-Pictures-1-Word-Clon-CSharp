@@ -2,6 +2,7 @@ using _4pictures1word.krsutils;
 using _4pictures1word.models;
 using System.CodeDom;
 using System.Drawing;
+using System.Text;
 
 namespace _4pictures1word
 {
@@ -103,14 +104,36 @@ namespace _4pictures1word
         {
             Button botonClickeado = (Button)sender;
 
-            //añadir
+            //añadir letras
             if (indexLetter < JSONWord.Word.Length)
             {
                 botonesLetter[indexLetter].Text = botonClickeado.Text;
                 indexLetter++;
             }
 
+            //Verificar última letra de la palabra 
+            if(botonesLetter.Where(x => x.Enabled).OrderBy(x => Convert.ToInt32(x.Tag)).Last().Text != "")
+            {
+                List<Button> enableds = botonesLetter.Where(x => x.Enabled).OrderBy(x => Convert.ToInt32(x.Tag)).ToList();
+                StringBuilder palabraCorrecta = new StringBuilder();
 
+
+                foreach (Button b in enableds)
+                {
+                    palabraCorrecta.Append(b.Text); //me da cosa que haya espacios o algo
+                }
+
+                if (JSONWord.Word == palabraCorrecta.ToString())
+                {
+                    //testing solamente
+                    MessageBox.Show("ES CORRECTO");
+                }
+                else
+                {
+                    MessageBox.Show("NO ES ESE XDD");
+                }
+
+            }
         }
         private void buttonEliminarLetters_Click(object sender, EventArgs e)
         {
@@ -119,6 +142,12 @@ namespace _4pictures1word
             {
                 button.Text = "";
             }
+        }
+
+        private void CorrectAnswerChecker()
+        {
+            //al momento de poner la letra
+           
         }
         #endregion
 
