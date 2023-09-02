@@ -20,7 +20,6 @@ namespace _4pictures1word
             CargarForm();
             CargarNivel();
 
-            EnableLetterButtons();
         }
 
         private void CargarNivel()
@@ -33,6 +32,8 @@ namespace _4pictures1word
             AddImages();
             ChangeButtons();
             LimpiarButtons();
+            EnableLetterButtons();
+
         }
 
         private void CargarForm()
@@ -88,6 +89,11 @@ namespace _4pictures1word
 
         private void EnableLetterButtons()
         {
+            foreach(Button b in botonesLetter)
+            {
+                b.Enabled = false;
+            }
+
             for (int i = 0; i < JSONWord.Word.Length; i++)
             {
                 botonesLetter[i].Enabled = true;
