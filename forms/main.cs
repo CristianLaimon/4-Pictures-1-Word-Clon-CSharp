@@ -59,7 +59,7 @@ namespace _4pictures1word
             //    Image.FromFile(JSONWord.Imagespath[3]) };
             byte adder = 0;
 
-            foreach(PictureBox pb in this.Controls.OfType<PictureBox>())
+            foreach (PictureBox pb in this.Controls.OfType<PictureBox>())
             {
                 pb.ImageLocation = JSONWord.Imagespath[adder];
                 adder++;

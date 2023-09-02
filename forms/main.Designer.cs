@@ -72,6 +72,7 @@
             pictureBox1.Location = new Point(110, 53);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(235, 215);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
@@ -80,6 +81,7 @@
             pictureBox2.Location = new Point(351, 53);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(235, 215);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 1;
             pictureBox2.TabStop = false;
             // 
@@ -88,6 +90,7 @@
             pictureBox3.Location = new Point(110, 274);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(235, 215);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 2;
             pictureBox3.TabStop = false;
             // 
@@ -96,6 +99,7 @@
             pictureBox4.Location = new Point(351, 274);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(235, 215);
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 3;
             pictureBox4.TabStop = false;
             // 
