@@ -28,7 +28,7 @@ namespace _4pictures1word
             statsitos = JsonManager.GetJSONstats();
             labelLevelNumber.Text = statsitos.Level.ToString();
             labelMoneyNumber.Text = statsitos.Money.ToString();
-            ChooseWord();
+            JSONWord = GameMachine.ChooseWord();
             AddImages();
             ChangeButtons();
             LimpiarButtons();
@@ -43,40 +43,6 @@ namespace _4pictures1word
             AddSharedEvent();
             botonesLetter = this.Controls.OfType<Button>().Where(k => k.Text == "").OrderBy(k => Convert.ToInt16(k.Tag)).ToList();
             this.StartPosition = FormStartPosition.CenterScreen;
-        }
-
-        private void ChooseWord()
-        {
-            bool found = false;
-            bool todasResueltas = true;
-
-            while (!found) //Repite mientras found == false (no se encuentre la palabra)
-            {
-                JSONWord = GameMachine.RandomWord();
-
-                for (int i = 0; i < GameMachine.TotalWords.Length; i++)
-                {
-                    Palabra w = GameMachine.TotalWords[i];
-
-                    if (w.Word == JSONWord.Word && w.Resolved == false && JSONWord.Resolved == false)
-                    {
-                        found = true;
-                        break;
-                        //Se encontr�!
-                    }
-                    //No se ha encontrado...
-
-                    if (!w.Resolved) //Conque haya una Resolved False, entonces no se ha terminado
-                    {
-                        todasResueltas = false;
-                    }
-                }
-
-                if (todasResueltas)//Para evitar while infinito cuando todas est�n resueltas
-                {
-                    break;
-                }
-            }
         }
 
         private void AddSharedEvent()

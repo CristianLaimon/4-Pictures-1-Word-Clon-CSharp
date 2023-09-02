@@ -27,6 +27,41 @@ namespace _4pictures1word.krsutils
 
         }
 
+        public static Palabra ChooseWord()
+        {
+            Palabra JSONWord = null ;
+            bool found = false;
+            bool todasResueltas = true;
 
+            while (!found) //Repite mientras found == false (no se encuentre la palabra)
+            {
+                JSONWord = GameMachine.RandomWord();
+
+                for (int i = 0; i < GameMachine.TotalWords.Length; i++)
+                {
+                    Palabra w = GameMachine.TotalWords[i];
+
+                    if (w.Word == JSONWord.Word && w.Resolved == false && JSONWord.Resolved == false)
+                    {
+                        found = true;
+                        break;
+                        //Se encontrï¿½!
+                    }
+                    //No se ha encontrado...
+
+                    if (!w.Resolved) //Conque haya una Resolved False, entonces no se ha terminado
+                    {
+                        todasResueltas = false;
+                    }
+                }
+
+                if (todasResueltas)//Para evitar while infinito cuando todas estï¿½n resueltas
+                {
+                    break;
+                }
+            }
+
+            return JSONWord;
+        }
     }
 }
