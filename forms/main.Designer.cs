@@ -52,6 +52,15 @@
             labelLevelNumber = new Label();
             labelMoneyNumber = new Label();
             buttonMenu = new Button();
+            button15 = new Button();
+            button16 = new Button();
+            button17 = new Button();
+            button18 = new Button();
+            button19 = new Button();
+            button20 = new Button();
+            button21 = new Button();
+            button22 = new Button();
+            buttonEliminarLetters = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -60,7 +69,7 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(114, 70);
+            pictureBox1.Location = new Point(110, 53);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(235, 215);
             pictureBox1.TabIndex = 0;
@@ -68,7 +77,7 @@
             // 
             // pictureBox2
             // 
-            pictureBox2.Location = new Point(355, 70);
+            pictureBox2.Location = new Point(351, 53);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(235, 215);
             pictureBox2.TabIndex = 1;
@@ -76,7 +85,7 @@
             // 
             // pictureBox3
             // 
-            pictureBox3.Location = new Point(114, 291);
+            pictureBox3.Location = new Point(110, 274);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(235, 215);
             pictureBox3.TabIndex = 2;
@@ -84,7 +93,7 @@
             // 
             // pictureBox4
             // 
-            pictureBox4.Location = new Point(355, 291);
+            pictureBox4.Location = new Point(351, 274);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(235, 215);
             pictureBox4.TabIndex = 3;
@@ -92,7 +101,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(94, 555);
+            button1.Location = new Point(95, 588);
             button1.Name = "button1";
             button1.Size = new Size(58, 57);
             button1.TabIndex = 4;
@@ -101,7 +110,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(158, 555);
+            button2.Location = new Point(159, 588);
             button2.Name = "button2";
             button2.Size = new Size(58, 57);
             button2.TabIndex = 5;
@@ -110,7 +119,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(222, 555);
+            button3.Location = new Point(223, 588);
             button3.Name = "button3";
             button3.Size = new Size(58, 57);
             button3.TabIndex = 6;
@@ -119,7 +128,7 @@
             // 
             // button4
             // 
-            button4.Location = new Point(286, 555);
+            button4.Location = new Point(287, 588);
             button4.Name = "button4";
             button4.Size = new Size(58, 57);
             button4.TabIndex = 7;
@@ -128,7 +137,7 @@
             // 
             // button5
             // 
-            button5.Location = new Point(350, 555);
+            button5.Location = new Point(351, 588);
             button5.Name = "button5";
             button5.Size = new Size(58, 57);
             button5.TabIndex = 8;
@@ -137,7 +146,7 @@
             // 
             // button6
             // 
-            button6.Location = new Point(414, 555);
+            button6.Location = new Point(415, 588);
             button6.Name = "button6";
             button6.Size = new Size(58, 57);
             button6.TabIndex = 9;
@@ -146,7 +155,7 @@
             // 
             // button7
             // 
-            button7.Location = new Point(478, 555);
+            button7.Location = new Point(479, 588);
             button7.Name = "button7";
             button7.Size = new Size(58, 57);
             button7.TabIndex = 10;
@@ -155,7 +164,7 @@
             // 
             // button8
             // 
-            button8.Location = new Point(94, 618);
+            button8.Location = new Point(95, 651);
             button8.Name = "button8";
             button8.Size = new Size(58, 57);
             button8.TabIndex = 11;
@@ -164,7 +173,7 @@
             // 
             // button9
             // 
-            button9.Location = new Point(158, 618);
+            button9.Location = new Point(159, 651);
             button9.Name = "button9";
             button9.Size = new Size(58, 57);
             button9.TabIndex = 12;
@@ -173,7 +182,7 @@
             // 
             // button10
             // 
-            button10.Location = new Point(222, 618);
+            button10.Location = new Point(223, 651);
             button10.Name = "button10";
             button10.Size = new Size(58, 57);
             button10.TabIndex = 13;
@@ -182,7 +191,7 @@
             // 
             // button11
             // 
-            button11.Location = new Point(286, 618);
+            button11.Location = new Point(287, 651);
             button11.Name = "button11";
             button11.Size = new Size(58, 57);
             button11.TabIndex = 14;
@@ -191,7 +200,7 @@
             // 
             // button12
             // 
-            button12.Location = new Point(350, 618);
+            button12.Location = new Point(351, 651);
             button12.Name = "button12";
             button12.Size = new Size(58, 57);
             button12.TabIndex = 15;
@@ -200,7 +209,7 @@
             // 
             // button13
             // 
-            button13.Location = new Point(414, 618);
+            button13.Location = new Point(415, 651);
             button13.Name = "button13";
             button13.Size = new Size(58, 57);
             button13.TabIndex = 16;
@@ -209,7 +218,7 @@
             // 
             // button14
             // 
-            button14.Location = new Point(478, 618);
+            button14.Location = new Point(479, 651);
             button14.Name = "button14";
             button14.Size = new Size(58, 57);
             button14.TabIndex = 17;
@@ -218,7 +227,7 @@
             // 
             // buttonHint
             // 
-            buttonHint.Location = new Point(555, 555);
+            buttonHint.Location = new Point(556, 588);
             buttonHint.Name = "buttonHint";
             buttonHint.Size = new Size(76, 119);
             buttonHint.TabIndex = 18;
@@ -263,7 +272,7 @@
             // 
             // buttonMenu
             // 
-            buttonMenu.Location = new Point(555, 690);
+            buttonMenu.Location = new Point(556, 723);
             buttonMenu.Name = "buttonMenu";
             buttonMenu.Size = new Size(126, 29);
             buttonMenu.TabIndex = 23;
@@ -271,11 +280,118 @@
             buttonMenu.UseVisualStyleBackColor = true;
             buttonMenu.Click += buttonMenu_Click;
             // 
+            // button15
+            // 
+            button15.Enabled = false;
+            button15.FlatStyle = FlatStyle.System;
+            button15.Location = new Point(98, 516);
+            button15.Name = "button15";
+            button15.Size = new Size(56, 52);
+            button15.TabIndex = 24;
+            button15.Tag = "0";
+            button15.UseVisualStyleBackColor = true;
+            // 
+            // button16
+            // 
+            button16.Enabled = false;
+            button16.FlatStyle = FlatStyle.System;
+            button16.Location = new Point(160, 516);
+            button16.Name = "button16";
+            button16.Size = new Size(56, 52);
+            button16.TabIndex = 25;
+            button16.Tag = "1";
+            button16.UseVisualStyleBackColor = true;
+            // 
+            // button17
+            // 
+            button17.Enabled = false;
+            button17.FlatStyle = FlatStyle.System;
+            button17.Location = new Point(222, 516);
+            button17.Name = "button17";
+            button17.Size = new Size(56, 52);
+            button17.TabIndex = 26;
+            button17.Tag = "2";
+            button17.UseVisualStyleBackColor = true;
+            // 
+            // button18
+            // 
+            button18.Enabled = false;
+            button18.FlatStyle = FlatStyle.System;
+            button18.Location = new Point(284, 516);
+            button18.Name = "button18";
+            button18.Size = new Size(56, 52);
+            button18.TabIndex = 27;
+            button18.Tag = "3";
+            button18.UseVisualStyleBackColor = true;
+            // 
+            // button19
+            // 
+            button19.Enabled = false;
+            button19.FlatStyle = FlatStyle.System;
+            button19.Location = new Point(346, 516);
+            button19.Name = "button19";
+            button19.Size = new Size(56, 52);
+            button19.TabIndex = 28;
+            button19.Tag = "4";
+            button19.UseVisualStyleBackColor = true;
+            // 
+            // button20
+            // 
+            button20.Enabled = false;
+            button20.FlatStyle = FlatStyle.System;
+            button20.Location = new Point(408, 516);
+            button20.Name = "button20";
+            button20.Size = new Size(56, 52);
+            button20.TabIndex = 29;
+            button20.Tag = "5";
+            button20.UseVisualStyleBackColor = true;
+            // 
+            // button21
+            // 
+            button21.Enabled = false;
+            button21.FlatStyle = FlatStyle.System;
+            button21.Location = new Point(470, 516);
+            button21.Name = "button21";
+            button21.Size = new Size(56, 52);
+            button21.TabIndex = 30;
+            button21.Tag = "6";
+            button21.UseVisualStyleBackColor = true;
+            // 
+            // button22
+            // 
+            button22.Enabled = false;
+            button22.FlatStyle = FlatStyle.System;
+            button22.Location = new Point(530, 516);
+            button22.Name = "button22";
+            button22.Size = new Size(56, 52);
+            button22.TabIndex = 31;
+            button22.Tag = "7";
+            button22.UseVisualStyleBackColor = true;
+            // 
+            // buttonEliminarLetters
+            // 
+            buttonEliminarLetters.Location = new Point(601, 528);
+            buttonEliminarLetters.Name = "buttonEliminarLetters";
+            buttonEliminarLetters.Size = new Size(94, 29);
+            buttonEliminarLetters.TabIndex = 32;
+            buttonEliminarLetters.Text = "Eliminar";
+            buttonEliminarLetters.UseVisualStyleBackColor = true;
+            buttonEliminarLetters.Click += buttonEliminarLetters_Click;
+            // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(718, 731);
+            ClientSize = new Size(718, 768);
+            Controls.Add(buttonEliminarLetters);
+            Controls.Add(button22);
+            Controls.Add(button21);
+            Controls.Add(button20);
+            Controls.Add(button19);
+            Controls.Add(button18);
+            Controls.Add(button17);
+            Controls.Add(button16);
+            Controls.Add(button15);
             Controls.Add(buttonMenu);
             Controls.Add(labelMoneyNumber);
             Controls.Add(labelLevelNumber);
@@ -337,5 +453,14 @@
         private Label labelLevelNumber;
         private Label labelMoneyNumber;
         private Button buttonMenu;
+        private Button button15;
+        private Button button16;
+        private Button button17;
+        private Button button18;
+        private Button button19;
+        private Button button20;
+        private Button button21;
+        private Button button22;
+        private Button buttonEliminarLetters;
     }
 }

@@ -11,11 +11,15 @@ namespace _4pictures1word
         private List<Button> botonesChar;
         private List<Button> botonesLetter;
         private List<Char> wordChar;
+
+        #region CargarForm
         public Main()
         {
             InitializeComponent();
             Cargar();
             ChangeButtons();
+            AddSharedEvent();
+            EnableLetterButtons();
         }
 
         private void Cargar()
@@ -26,15 +30,30 @@ namespace _4pictures1word
             botonesChar = this.Controls.OfType<Button>().Where(k => k.Text == "char").ToList();
             botonesLetter = this.Controls.OfType<Button>().Where(k => k.Text == "").OrderBy(k => Convert.ToInt16(k.Tag)).ToList();
             indexLetter = 0;
-
+        }
+        private void AddSharedEvent()
+        {
+            foreach (Button botonChar in botonesChar)
+            {
+                botonChar.Click += SharedButton_Click;
+            }
         }
 
+        private void EnableLetterButtons()
+        {
+            for (int i = 0; i < wordChar.Count; i++)
+            {
+                botonesLetter[i].Enabled = true;
+            }
+        }
+        #endregion
+
+        #region ChangeButtons()
         private void ChangeButtons()
         {
 
             int buttonIndex;
             Random random = new Random();
-            List<Char> wordChar = GameMachine.RandomWord().ToCharArray().ToList(); //TODO: Solucionar palabras repetidas
             wordChar = GameMachine.RandomWord().ToCharArray().ToList(); //TODO: Solucionar palabras repetidas
             List<Char> alphabetLore = new GameMachine().Alphabet.ToList();
             List<Button> botonesChar = this.Controls.OfType<Button>().Where(k => k.Text == "char").ToList();
@@ -61,6 +80,10 @@ namespace _4pictures1word
 
                 botonesChar.RemoveAt(buttonIndex);
             }
+        }
+        #endregion
+
+
 
 
         }
