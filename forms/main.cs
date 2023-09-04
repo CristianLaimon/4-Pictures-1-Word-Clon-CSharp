@@ -24,7 +24,7 @@ namespace _4pictures1word
 
         private void CargarNivel()
         {
-            if(!GameMachine.CheckWin())
+            if (!GameMachine.CheckWin())
             {
                 indexLetter = 0;
                 statsitos = JsonManager.GetJSONstats();
@@ -63,7 +63,7 @@ namespace _4pictures1word
 
         private void EnableLetterButtons()
         {
-            foreach(Button b in botonesLetter)
+            foreach (Button b in botonesLetter)
             {
                 b.Enabled = false;
             }
@@ -199,17 +199,33 @@ namespace _4pictures1word
 
         private void buttonMenu_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             Application.OpenForms[0].Show();
             Application.OpenForms[0].BringToFront();
         }
 
-        private void Main_FormClosed(object sender, FormClosedEventArgs e)
+        private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.OpenForms[0].Show();
-            Application.OpenForms[0].BringToFront();
+            // Verifica si el usuario hizo clic en la "X" para cerrar el formulario
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                // Cancela el cierre del formulario
+                e.Cancel = true;
+
+                // En lugar de cerrar, simplemente oculta el formulario
+                this.Hide();
+                Application.OpenForms[0].Show();
+                Application.OpenForms[0].BringToFront();
+            }
         }
 
+        //private void Main_FormClosed(object sender, FormClosedEventArgs e)
+        //{
+        //    Application.OpenForms[0].Show();
+        //    Application.OpenForms[0].BringToFront();
+        //}
         #endregion CloseForm Logic
+
+
     }
 }

@@ -13,6 +13,7 @@ namespace _4pictures1word.forms
 {
     public partial class menu : Form
     {
+        private Main formsito;
         public menu()
         {
             InitializeComponent();
@@ -20,11 +21,18 @@ namespace _4pictures1word.forms
 
         private void buttonJugar_Click(object sender, EventArgs e)
         {
-            Main formsito = new Main();
+            // Verifica si el formulario secundario ya existe
+            if (this.formsito == null || this.formsito.IsDisposed)
+            {
+                // Si no existe o se ha cerrado, crea uno nuevo
+                this.formsito = new Main();
+            }
+
+            // Muestra o restaura el formulario secundario
             formsito.Show();
             formsito.BringToFront();
             formsito.Focus();
-            this.Hide();
+            Hide();
         }
 
         private void buttonSalir_Click(object sender, EventArgs e)

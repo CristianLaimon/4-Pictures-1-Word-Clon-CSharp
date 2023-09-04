@@ -422,7 +422,7 @@
             Controls.Add(pictureBox1);
             Name = "Main";
             Text = "4 Pictures 1 Answer";
-            FormClosed += Main_FormClosed;
+            FormClosing += Main_FormClosing;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();

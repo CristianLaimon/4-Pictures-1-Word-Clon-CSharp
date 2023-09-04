@@ -34,7 +34,7 @@
             pictureBox1 = new PictureBox();
             statusStrip1 = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
-            button1 = new Button();
+            buttonContinuar = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             statusStrip1.SuspendLayout();
             SuspendLayout();
@@ -51,13 +51,12 @@
             // 
             // buttonJugar
             // 
-            buttonJugar.Location = new Point(102, 275);
+            buttonJugar.Location = new Point(102, 264);
             buttonJugar.Name = "buttonJugar";
             buttonJugar.Size = new Size(149, 29);
             buttonJugar.TabIndex = 1;
             buttonJugar.Text = "Nueva Partida";
             buttonJugar.UseVisualStyleBackColor = true;
-            buttonJugar.Click += buttonJugar_Click;
             // 
             // buttonSalir
             // 
@@ -95,22 +94,22 @@
             toolStripStatusLabel1.Size = new Size(205, 20);
             toolStripStatusLabel1.Text = "Hecho por: Kristan Ruíz limón";
             // 
-            // button1
+            // buttonContinuar
             // 
-            button1.Enabled = false;
-            button1.Location = new Point(130, 333);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 11;
-            button1.Text = "Continuar";
-            button1.UseVisualStyleBackColor = true;
+            buttonContinuar.Location = new Point(130, 320);
+            buttonContinuar.Name = "buttonContinuar";
+            buttonContinuar.Size = new Size(94, 29);
+            buttonContinuar.TabIndex = 11;
+            buttonContinuar.Text = "Continuar";
+            buttonContinuar.UseVisualStyleBackColor = true;
+            buttonContinuar.Click += buttonJugar_Click;
             // 
             // menu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(370, 485);
-            Controls.Add(button1);
+            Controls.Add(buttonContinuar);
             Controls.Add(statusStrip1);
             Controls.Add(pictureBox1);
             Controls.Add(buttonSalir);
@@ -133,6 +132,6 @@
         private PictureBox pictureBox1;
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel toolStripStatusLabel1;
-        private Button button1;
+        private Button buttonContinuar;
     }
 }
