@@ -14,7 +14,7 @@ namespace _4pictures1word
         private List<Button> botonesLetter;
         private Palabra JSONWord;
 
-        public Stats Statsitos { get => statsitos;}
+        public Stats Statsitos { get => statsitos; }
 
         #region CargarForm
 
@@ -23,7 +23,6 @@ namespace _4pictures1word
             InitializeComponent();
             CargarForm();
             CargarNivel();
-
         }
 
         private void CargarNivel()
@@ -39,14 +38,12 @@ namespace _4pictures1word
                 ChangeButtons();
                 LimpiarButtons();
                 EnableLetterButtons();
-
             }
             else
             {
                 //Codigo de la victoria
                 MessageBox.Show("Has ganado");
                 Palabra[] pepe = JsonManager.GetJSONwords();
-
 
                 //Reiniciar palabras
                 for (int i = 0; i < pepe.Length; i++)
@@ -68,7 +65,6 @@ namespace _4pictures1word
 
         public void RestartStats()
         {
-
             Statsitos.Level = 1;
             Statsitos.Money = 0;
             JsonManager.UpdateJSONstats(Statsitos);
@@ -227,7 +223,7 @@ namespace _4pictures1word
             }
         }
 
-        #endregion
+        #endregion Handlers;IMPORTANT
 
         #region CloseForm Logic
 
@@ -248,14 +244,11 @@ namespace _4pictures1word
                 e.Cancel = true;
                 // En lugar de cerrar, simplemente oculta el formulario
                 this.Hide();
-
             }
             Application.OpenForms[0].Show();
             Application.OpenForms[0].BringToFront();
         }
 
         #endregion CloseForm Logic
-
-
     }
 }

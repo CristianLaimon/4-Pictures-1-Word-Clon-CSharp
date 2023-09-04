@@ -1,16 +1,10 @@
 ﻿using _4pictures1word.models;
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _4pictures1word.krsutils
 {
     public static class JsonManager
     {
-
         public static Stats GetJSONstats()
         {
             string text = File.ReadAllText(Path.Combine(Environment.CurrentDirectory, @"testdata\stats.json"));
@@ -43,8 +37,6 @@ namespace _4pictures1word.krsutils
 
             string inputJSON = JsonConvert.SerializeObject(GameMachine.TotalWords, Formatting.Indented);
             File.WriteAllText(@"testdata\data.json", inputJSON);
-
-
         }
 
         public static void UpdateJSONstats(Stats updatedStats)

@@ -18,8 +18,6 @@ namespace _4pictures1word.forms
 
         private void buttonJugar_Click_1(object sender, EventArgs e)
         {
-
-
             if (this.formsito != null)
             {
                 formsito.RestartStats();
@@ -54,9 +52,7 @@ namespace _4pictures1word.forms
 
         public void UpdateMoneyNumber()
         {
-
-          labelDineroActual.Text = $"Dinero: {formsito.Statsitos.Money}";
-
+            labelDineroActual.Text = $"Dinero: {formsito.Statsitos.Money}";
         }
 
         public void DesableContinue()

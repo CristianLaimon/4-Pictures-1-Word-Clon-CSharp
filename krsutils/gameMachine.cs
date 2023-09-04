@@ -1,10 +1,4 @@
 ﻿using _4pictures1word.models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _4pictures1word.krsutils
 {
@@ -26,12 +20,11 @@ namespace _4pictures1word.krsutils
             int totalRepertorio = repertorio.Length;
             int selectedIndex = randomizer.Next(0, totalRepertorio);
             return repertorio[selectedIndex];
-
         }
 
         public static Palabra ChooseWord()
         {
-            Palabra JSONWord = null ;
+            Palabra JSONWord = null;
             bool found = false;
             bool todasResueltas = true; //Solo para evitar while infinito
 
@@ -65,15 +58,16 @@ namespace _4pictures1word.krsutils
 
             return JSONWord;
         }
+
         public static bool CheckWin()
         {
             Palabra[] palabras = JsonManager.GetJSONwords();
 
             bool win = true;
 
-            foreach( Palabra p in palabras)
+            foreach (Palabra p in palabras)
             {
-                if(p.Resolved == false)
+                if (p.Resolved == false)
                 {
                     win = false;
                 }
@@ -82,6 +76,4 @@ namespace _4pictures1word.krsutils
             return win;
         }
     }
-
-    
 }
