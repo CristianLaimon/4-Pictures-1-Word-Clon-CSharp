@@ -159,7 +159,7 @@ namespace _4pictures1word
                 if (JSONWord.Word == palabraCorrecta.ToString())
                 {
                     //testing solamente
-                    MessageBox.Show("ES CORRECTO");
+                    MessageBox.Show("Palabra Correcta!");
                     JsonManager.UpdateJSONword(JSONWord);
                     statsitos.Level++;
                     statsitos.Money += 20;
@@ -168,7 +168,7 @@ namespace _4pictures1word
                 }
                 else
                 {
-                    MessageBox.Show("NO ES ESE XDD");
+                    MessageBox.Show("Palabra Incorrecta");
                 }
             }
         }
