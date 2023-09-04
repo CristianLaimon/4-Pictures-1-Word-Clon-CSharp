@@ -35,6 +35,7 @@
             statusStrip1 = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
             buttonContinuar = new Button();
+            labelDineroActual = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             statusStrip1.SuspendLayout();
             SuspendLayout();
@@ -57,6 +58,7 @@
             buttonJugar.TabIndex = 1;
             buttonJugar.Text = "Nueva Partida";
             buttonJugar.UseVisualStyleBackColor = true;
+            buttonJugar.Click += buttonJugar_Click_1;
             // 
             // buttonSalir
             // 
@@ -82,7 +84,7 @@
             // 
             statusStrip1.ImageScalingSize = new Size(20, 20);
             statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1 });
-            statusStrip1.Location = new Point(0, 459);
+            statusStrip1.Location = new Point(0, 524);
             statusStrip1.Name = "statusStrip1";
             statusStrip1.Size = new Size(370, 26);
             statusStrip1.TabIndex = 10;
@@ -96,6 +98,7 @@
             // 
             // buttonContinuar
             // 
+            buttonContinuar.Enabled = false;
             buttonContinuar.Location = new Point(130, 320);
             buttonContinuar.Name = "buttonContinuar";
             buttonContinuar.Size = new Size(94, 29);
@@ -104,11 +107,21 @@
             buttonContinuar.UseVisualStyleBackColor = true;
             buttonContinuar.Click += buttonJugar_Click;
             // 
+            // labelDineroActual
+            // 
+            labelDineroActual.AutoSize = true;
+            labelDineroActual.Location = new Point(22, 488);
+            labelDineroActual.Name = "labelDineroActual";
+            labelDineroActual.Size = new Size(69, 20);
+            labelDineroActual.TabIndex = 12;
+            labelDineroActual.Text = "Dinero: 0";
+            // 
             // menu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(370, 485);
+            ClientSize = new Size(370, 550);
+            Controls.Add(labelDineroActual);
             Controls.Add(buttonContinuar);
             Controls.Add(statusStrip1);
             Controls.Add(pictureBox1);
@@ -133,5 +146,6 @@
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel toolStripStatusLabel1;
         private Button buttonContinuar;
+        private Label labelDineroActual;
     }
 }

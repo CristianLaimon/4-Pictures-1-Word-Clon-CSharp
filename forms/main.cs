@@ -1,3 +1,4 @@
+using _4pictures1word.forms;
 using _4pictures1word.krsutils;
 using _4pictures1word.models;
 using Newtonsoft.Json;
@@ -12,6 +13,8 @@ namespace _4pictures1word
         private List<Button> botonesChar;
         private List<Button> botonesLetter;
         private Palabra JSONWord;
+
+        public Stats Statsitos { get => statsitos;}
 
         #region CargarForm
 
@@ -29,8 +32,8 @@ namespace _4pictures1word
             {
                 indexLetter = 0;
                 statsitos = JsonManager.GetJSONstats();
-                labelLevelNumber.Text = statsitos.Level.ToString();
-                labelMoneyNumber.Text = statsitos.Money.ToString();
+                labelLevelNumber.Text = Statsitos.Level.ToString();
+                labelMoneyNumber.Text = Statsitos.Money.ToString();
                 JSONWord = GameMachine.ChooseWord();
                 AddImages();
                 ChangeButtons();
@@ -40,22 +43,35 @@ namespace _4pictures1word
             }
             else
             {
+                //Codigo de la victoria
                 MessageBox.Show("Has ganado");
                 Palabra[] pepe = JsonManager.GetJSONwords();
 
-                //Reiniciar todas las palabras como no resueltas
-                for(int i = 0; i < pepe.Length; i++)
+
+                //Reiniciar palabras
+                for (int i = 0; i < pepe.Length; i++)
                 {
                     pepe[i].Resolved = false;
                 }
+
+                //inhabilitar continuar del menu
+                 ((menu)Application.OpenForms[0]).DesableContinue();
 
                 //Guardar cambios
                 string resetedWord = JsonConvert.SerializeObject(pepe, Formatting.Indented);
                 File.WriteAllText(@"testdata\data.json", resetedWord);
                 GameMachine.permitirCierre = true;
-      
+
                 this.Close();
             }
+        }
+
+        public void RestartStats()
+        {
+
+            Statsitos.Level = 1;
+            Statsitos.Money = 0;
+            JsonManager.UpdateJSONstats(Statsitos);
         }
 
         private void CargarForm()
@@ -179,9 +195,9 @@ namespace _4pictures1word
                     //testing solamente
                     MessageBox.Show("Palabra Correcta!");
                     JsonManager.UpdateJSONword(JSONWord);
-                    statsitos.Level++;
-                    statsitos.Money += 20;
-                    JsonManager.UpdateJSONstats(statsitos);
+                    Statsitos.Level++;
+                    Statsitos.Money += 20;
+                    JsonManager.UpdateJSONstats(Statsitos);
                     CargarNivel();
                 }
                 else
@@ -218,6 +234,7 @@ namespace _4pictures1word
         private void buttonMenu_Click(object sender, EventArgs e)
         {
             this.Hide();
+            ((menu)Application.OpenForms[0]).UpdateMoneyNumber();
             Application.OpenForms[0].Show();
             Application.OpenForms[0].BringToFront();
         }
@@ -228,22 +245,15 @@ namespace _4pictures1word
             if (e.CloseReason == CloseReason.UserClosing && !GameMachine.permitirCierre)
             {
                 // Cancela el cierre del formulario
-                    e.Cancel = true;
-                
-
+                e.Cancel = true;
                 // En lugar de cerrar, simplemente oculta el formulario
                 this.Hide();
 
             }
-                Application.OpenForms[0].Show();
-                Application.OpenForms[0].BringToFront();
+            Application.OpenForms[0].Show();
+            Application.OpenForms[0].BringToFront();
         }
 
-        //private void Main_FormClosed(object sender, FormClosedEventArgs e)
-        //{
-        //    Application.OpenForms[0].Show();
-        //    Application.OpenForms[0].BringToFront();
-        //}
         #endregion CloseForm Logic
 
 

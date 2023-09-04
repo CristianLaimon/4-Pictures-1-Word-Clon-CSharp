@@ -1,25 +1,42 @@
 ﻿using _4pictures1word.krsutils;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace _4pictures1word.forms
 {
     public partial class menu : Form
     {
         private Main formsito;
+
         public menu()
         {
             InitializeComponent();
         }
 
         private void buttonJugar_Click(object sender, EventArgs e)
+        {
+            JugarLogic();
+        }
+
+        private void buttonJugar_Click_1(object sender, EventArgs e)
+        {
+
+
+            if (this.formsito != null)
+            {
+                formsito.RestartStats();
+                GameMachine.permitirCierre = true;
+                this.formsito.Close();
+            }
+
+            buttonContinuar.Enabled = true;
+            JugarLogic();
+        }
+
+        private void buttonSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void JugarLogic()
         {
             // Verifica si el formulario secundario ya existe
             if (this.formsito == null || this.formsito.IsDisposed)
@@ -35,10 +52,16 @@ namespace _4pictures1word.forms
             Hide();
         }
 
-        private void buttonSalir_Click(object sender, EventArgs e)
+        public void UpdateMoneyNumber()
         {
-            Application.Exit();
+
+          labelDineroActual.Text = $"Dinero: {formsito.Statsitos.Money}";
+
         }
 
+        public void DesableContinue()
+        {
+            buttonContinuar.Enabled = false;
+        }
     }
 }

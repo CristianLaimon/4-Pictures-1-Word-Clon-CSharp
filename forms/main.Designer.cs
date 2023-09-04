@@ -46,7 +46,6 @@
             button12 = new Button();
             button13 = new Button();
             button14 = new Button();
-            buttonHint = new Button();
             label1 = new Label();
             label2 = new Label();
             labelLevelNumber = new Label();
@@ -105,7 +104,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(95, 588);
+            button1.Location = new Point(125, 584);
             button1.Name = "button1";
             button1.Size = new Size(58, 57);
             button1.TabIndex = 4;
@@ -114,7 +113,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(159, 588);
+            button2.Location = new Point(189, 584);
             button2.Name = "button2";
             button2.Size = new Size(58, 57);
             button2.TabIndex = 5;
@@ -123,7 +122,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(223, 588);
+            button3.Location = new Point(253, 584);
             button3.Name = "button3";
             button3.Size = new Size(58, 57);
             button3.TabIndex = 6;
@@ -132,7 +131,7 @@
             // 
             // button4
             // 
-            button4.Location = new Point(287, 588);
+            button4.Location = new Point(317, 584);
             button4.Name = "button4";
             button4.Size = new Size(58, 57);
             button4.TabIndex = 7;
@@ -141,7 +140,7 @@
             // 
             // button5
             // 
-            button5.Location = new Point(351, 588);
+            button5.Location = new Point(381, 584);
             button5.Name = "button5";
             button5.Size = new Size(58, 57);
             button5.TabIndex = 7;
@@ -150,7 +149,7 @@
             // 
             // button6
             // 
-            button6.Location = new Point(415, 588);
+            button6.Location = new Point(445, 584);
             button6.Name = "button6";
             button6.Size = new Size(58, 57);
             button6.TabIndex = 9;
@@ -159,7 +158,7 @@
             // 
             // button7
             // 
-            button7.Location = new Point(479, 588);
+            button7.Location = new Point(509, 584);
             button7.Name = "button7";
             button7.Size = new Size(58, 57);
             button7.TabIndex = 10;
@@ -168,7 +167,7 @@
             // 
             // button8
             // 
-            button8.Location = new Point(95, 651);
+            button8.Location = new Point(125, 647);
             button8.Name = "button8";
             button8.Size = new Size(58, 57);
             button8.TabIndex = 11;
@@ -177,7 +176,7 @@
             // 
             // button9
             // 
-            button9.Location = new Point(159, 651);
+            button9.Location = new Point(189, 647);
             button9.Name = "button9";
             button9.Size = new Size(58, 57);
             button9.TabIndex = 12;
@@ -186,7 +185,7 @@
             // 
             // button10
             // 
-            button10.Location = new Point(223, 651);
+            button10.Location = new Point(253, 647);
             button10.Name = "button10";
             button10.Size = new Size(58, 57);
             button10.TabIndex = 13;
@@ -195,7 +194,7 @@
             // 
             // button11
             // 
-            button11.Location = new Point(287, 651);
+            button11.Location = new Point(317, 647);
             button11.Name = "button11";
             button11.Size = new Size(58, 57);
             button11.TabIndex = 14;
@@ -204,7 +203,7 @@
             // 
             // button12
             // 
-            button12.Location = new Point(351, 651);
+            button12.Location = new Point(381, 647);
             button12.Name = "button12";
             button12.Size = new Size(58, 57);
             button12.TabIndex = 15;
@@ -213,7 +212,7 @@
             // 
             // button13
             // 
-            button13.Location = new Point(415, 651);
+            button13.Location = new Point(445, 647);
             button13.Name = "button13";
             button13.Size = new Size(58, 57);
             button13.TabIndex = 16;
@@ -222,21 +221,12 @@
             // 
             // button14
             // 
-            button14.Location = new Point(479, 651);
+            button14.Location = new Point(509, 647);
             button14.Name = "button14";
             button14.Size = new Size(58, 57);
             button14.TabIndex = 17;
             button14.Text = "char";
             button14.UseVisualStyleBackColor = true;
-            // 
-            // buttonHint
-            // 
-            buttonHint.Location = new Point(556, 588);
-            buttonHint.Name = "buttonHint";
-            buttonHint.Size = new Size(76, 119);
-            buttonHint.TabIndex = 18;
-            buttonHint.Text = "¿Ayuda? Coste = 15 ";
-            buttonHint.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -401,7 +391,6 @@
             Controls.Add(labelLevelNumber);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(buttonHint);
             Controls.Add(button14);
             Controls.Add(button13);
             Controls.Add(button12);
@@ -451,7 +440,6 @@
         private Button button12;
         private Button button13;
         private Button button14;
-        private Button buttonHint;
         private Label label1;
         private Label label2;
         private Label labelLevelNumber;
