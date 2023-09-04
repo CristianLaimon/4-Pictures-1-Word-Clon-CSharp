@@ -46,5 +46,11 @@ namespace _4pictures1word.krsutils
 
 
         }
+
+        public static void UpdateJSONstats(Stats updatedStats)
+        {
+            string inputJSON = JsonConvert.SerializeObject(updatedStats, Formatting.Indented);
+            File.WriteAllText(@"testdata\stats.json", inputJSON);
+        }
     }
 }

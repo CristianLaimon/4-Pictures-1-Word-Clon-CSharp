@@ -14,12 +14,7 @@ namespace _4pictures1word.models
         private int money;
         private byte hints;
 
-        public Stats(byte level, int money, byte hints)
-        {
-            this.Level = level;
-            this.Money = money;
-            this.Hints = hints;
-        }
+
 
         public byte Level { get => level; set => level = value; }
         public int Money { get => money; set => money = value; }

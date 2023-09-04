@@ -161,6 +161,9 @@ namespace _4pictures1word
                     //testing solamente
                     MessageBox.Show("ES CORRECTO");
                     JsonManager.UpdateJSONword(JSONWord);
+                    statsitos.Level++;
+                    statsitos.Money += 20;
+                    JsonManager.UpdateJSONstats(statsitos);
                     CargarNivel();
                 }
                 else
