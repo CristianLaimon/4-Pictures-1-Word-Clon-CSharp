@@ -1,5 +1,6 @@
 using _4pictures1word.krsutils;
 using _4pictures1word.models;
+using Newtonsoft.Json;
 using System.Text;
 
 namespace _4pictures1word
@@ -40,12 +41,29 @@ namespace _4pictures1word
             else
             {
                 MessageBox.Show("Has ganado");
+                Palabra[] pepe = JsonManager.GetJSONwords();
+
+                //Reiniciar todas las palabras como no resueltas
+                for(int i = 0; i < pepe.Length; i++)
+                {
+                    pepe[i].Resolved = false;
+                }
+
+                //Guardar cambios
+                string resetedWord = JsonConvert.SerializeObject(pepe, Formatting.Indented);
+                File.WriteAllText(@"testdata\data.json", resetedWord);
+                GameMachine.permitirCierre = true;
+      
                 this.Close();
             }
         }
 
         private void CargarForm()
         {
+            //Realmente nunca se cierra, solo se esconde.Solo se cerrará cuando gane el juego para que se reinicie. Cuando se reinicia
+            //tiene que evitar que se cierra y para eso es lo siguiente, hasta que vuelva a ganar y así repetirse
+            if (GameMachine.permitirCierre == true) GameMachine.permitirCierre = false;
+
             //Solo se ocupa añadir una vez los eventos a los BOTONES char y después reutilizar
             botonesChar = Controls.OfType<Button>().Where(k => k.Text == "char").ToList();
             AddSharedEvent();
@@ -207,16 +225,18 @@ namespace _4pictures1word
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
             // Verifica si el usuario hizo clic en la "X" para cerrar el formulario
-            if (e.CloseReason == CloseReason.UserClosing)
+            if (e.CloseReason == CloseReason.UserClosing && !GameMachine.permitirCierre)
             {
                 // Cancela el cierre del formulario
-                e.Cancel = true;
+                    e.Cancel = true;
+                
 
                 // En lugar de cerrar, simplemente oculta el formulario
                 this.Hide();
+
+            }
                 Application.OpenForms[0].Show();
                 Application.OpenForms[0].BringToFront();
-            }
         }
 
         //private void Main_FormClosed(object sender, FormClosedEventArgs e)

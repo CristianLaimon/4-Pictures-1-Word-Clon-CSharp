@@ -16,6 +16,8 @@ namespace _4pictures1word.krsutils
         public static List<char> Alphabet { get => alphabet; }
         public static Palabra[] TotalWords { get => repertorioActual; set => repertorioActual = value; }
 
+        public static bool permitirCierre = false;
+
         public static Palabra RandomWord()
         {
             Palabra[] repertorio = JsonManager.GetJSONwords();

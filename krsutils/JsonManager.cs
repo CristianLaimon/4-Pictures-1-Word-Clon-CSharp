@@ -34,7 +34,7 @@ namespace _4pictures1word.krsutils
 
             for (int i = 0; i < GameMachine.TotalWords.Length; i++)
             {
-                if (GameMachine.TotalWords[i] == updatedWord)
+                if (GameMachine.TotalWords[i].Word == updatedWord.Word)
                 {
                     GameMachine.TotalWords[i] = updatedWord;
                     break;
