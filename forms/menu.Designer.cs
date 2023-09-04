@@ -32,22 +32,26 @@
             buttonJugar = new Button();
             buttonSalir = new Button();
             pictureBox1 = new PictureBox();
-            label2 = new Label();
+            statusStrip1 = new StatusStrip();
+            toolStripStatusLabel1 = new ToolStripStatusLabel();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            statusStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(113, 20);
+            label1.Font = new Font("Segoe UI", 16.2F, FontStyle.Italic, GraphicsUnit.Point);
+            label1.Location = new Point(55, 25);
             label1.Name = "label1";
-            label1.Size = new Size(136, 20);
+            label1.Size = new Size(255, 38);
             label1.TabIndex = 0;
             label1.Text = "4 Pictures 1 Answer";
             // 
             // buttonJugar
             // 
-            buttonJugar.Location = new Point(113, 216);
+            buttonJugar.Location = new Point(102, 275);
             buttonJugar.Name = "buttonJugar";
             buttonJugar.Size = new Size(149, 29);
             buttonJugar.TabIndex = 1;
@@ -57,7 +61,7 @@
             // 
             // buttonSalir
             // 
-            buttonSalir.Location = new Point(133, 271);
+            buttonSalir.Location = new Point(130, 386);
             buttonSalir.Name = "buttonSalir";
             buttonSalir.Size = new Size(94, 29);
             buttonSalir.TabIndex = 7;
@@ -67,34 +71,56 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(113, 60);
+            pictureBox1.Image = Properties.Resources.R;
+            pictureBox1.Location = new Point(102, 90);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(138, 124);
+            pictureBox1.Size = new Size(160, 151);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 8;
             pictureBox1.TabStop = false;
             // 
-            // label2
+            // statusStrip1
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(12, 349);
-            label2.Name = "label2";
-            label2.Size = new Size(205, 20);
-            label2.TabIndex = 9;
-            label2.Text = "Hecho por: Kristan Ruíz limón";
+            statusStrip1.ImageScalingSize = new Size(20, 20);
+            statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1 });
+            statusStrip1.Location = new Point(0, 459);
+            statusStrip1.Name = "statusStrip1";
+            statusStrip1.Size = new Size(370, 26);
+            statusStrip1.TabIndex = 10;
+            statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            toolStripStatusLabel1.Size = new Size(205, 20);
+            toolStripStatusLabel1.Text = "Hecho por: Kristan Ruíz limón";
+            // 
+            // button1
+            // 
+            button1.Enabled = false;
+            button1.Location = new Point(130, 333);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 11;
+            button1.Text = "Continuar";
+            button1.UseVisualStyleBackColor = true;
             // 
             // menu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(377, 378);
-            Controls.Add(label2);
+            ClientSize = new Size(370, 485);
+            Controls.Add(button1);
+            Controls.Add(statusStrip1);
             Controls.Add(pictureBox1);
             Controls.Add(buttonSalir);
             Controls.Add(buttonJugar);
             Controls.Add(label1);
             Name = "menu";
-            Text = "menu";
+            Text = "4 Pictures 1 Answer - Game";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            statusStrip1.ResumeLayout(false);
+            statusStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -105,6 +131,8 @@
         private Button buttonJugar;
         private Button buttonSalir;
         private PictureBox pictureBox1;
-        private Label label2;
+        private StatusStrip statusStrip1;
+        private ToolStripStatusLabel toolStripStatusLabel1;
+        private Button button1;
     }
 }
