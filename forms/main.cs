@@ -144,6 +144,15 @@ namespace P122310544TM
                     int wordCharIndex = random.Next(wordChar.Count);
                     botonesChar[buttonIndex].Text = wordChar[wordCharIndex].ToString();
                     wordChar.RemoveAt(wordCharIndex);
+
+                    for (int j = 0; j < alphabetLore.Count; j++)
+                    {
+                        if (alphabetLore[j] == botonesChar[buttonIndex].Text.ToCharArray()[0])
+                        {
+                            alphabetLore.RemoveAt(j);
+                            break;
+                        }
+                    }
                 }
                 else
                 {
