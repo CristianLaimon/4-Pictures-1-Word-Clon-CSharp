@@ -135,7 +135,7 @@ namespace P122310544TM
             List<Button> copyBotonesChar = new List<Button>(botonesChar);
             //List<Button> botonesChar = this.Controls.OfType<Button>().Where(k => k.Text == "char").ToList();
 
-            for (int i = 0; i < totalBotones*2; i++)
+            for (int i = 0; i < totalBotones * 2; i++)
             {
                 buttonIndex = random.Next(wordChar.Count);
 
@@ -169,18 +169,26 @@ namespace P122310544TM
         private void SharedButton_Click(object sender, EventArgs e)
         {
             Button botonClickeado = (Button)sender;
+            Char charsito = botonClickeado.Text.ToCharArray()[0];
+
+            Char[] actualChars = JSONWord.Word.ToCharArray();
 
             //añadir letras
-            if (indexLetter < JSONWord.Word.Length)
+            for (int i = 0; i < actualChars.Length; i++)
             {
-                botonesLetter[indexLetter].Text = botonClickeado.Text;
-                indexLetter++;
+                if (actualChars[i] == charsito)
+                {
+                    botonesLetter[i].Text = charsito.ToString();
+                    botonClickeado.Enabled = false;
+                }
             }
+
+            
 
             //Inhabilitar botón clickeado
             botonClickeado.Enabled = false;
 
-            //Verificar última letra de la palabra
+            //Verificar última letra de la palabra (Rework, ahora que cheque que todas están llenas)
             if (botonesLetter.Where(x => x.Enabled).OrderBy(x => Convert.ToInt32(x.Tag)).Last().Text != "")
             {
                 List<Button> enableds = botonesLetter.Where(x => x.Enabled).OrderBy(x => Convert.ToInt32(x.Tag)).ToList();
@@ -263,7 +271,7 @@ namespace P122310544TM
         {
             if (numberButtons <= 16)
             {
-                 botonesChar = new List<Button>();
+                botonesChar = new List<Button>();
                 for (int i = 0; i < numberButtons; i++)
                 {
                     Button b = new Button();
@@ -294,6 +302,11 @@ namespace P122310544TM
             botonesChar.Clear();
             botonesChar = null;
             flowLayoutPanel.Controls.Clear();
+        } 
+
+        private void CheckChar()
+        {
+
         }
 
         #endregion
