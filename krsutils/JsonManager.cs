@@ -1,7 +1,7 @@
-﻿using _4pictures1word.models;
+﻿using P122310544TM.models;
 using Newtonsoft.Json;
 
-namespace _4pictures1word.krsutils
+namespace P122310544TM.krsutils
 {
     public static class JsonManager
     {

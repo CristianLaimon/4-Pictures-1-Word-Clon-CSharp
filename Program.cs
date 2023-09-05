@@ -1,7 +1,7 @@
-using _4pictures1word.forms;
-using _4pictures1word.krsutils;
+using P122310544TM.forms;
+using P122310544TM.krsutils;
 
-namespace _4pictures1word
+namespace P122310544TM
 {
     internal static class Program
     {

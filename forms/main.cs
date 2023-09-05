@@ -1,10 +1,10 @@
-using _4pictures1word.forms;
-using _4pictures1word.krsutils;
-using _4pictures1word.models;
+using P122310544TM.forms;
+using P122310544TM.krsutils;
+using P122310544TM.models;
 using Newtonsoft.Json;
 using System.Text;
 
-namespace _4pictures1word
+namespace P122310544TM
 {
     public partial class Main : Form
     {

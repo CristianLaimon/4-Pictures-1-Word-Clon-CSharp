@@ -1,4 +1,4 @@
-﻿namespace _4pictures1word.forms
+﻿namespace P122310544TM.forms
 {
     partial class menu
     {

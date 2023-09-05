@@ -1,4 +1,4 @@
-﻿namespace _4pictures1word.krsutils
+﻿namespace P122310544TM.krsutils
 {
     internal static class Startup
     {

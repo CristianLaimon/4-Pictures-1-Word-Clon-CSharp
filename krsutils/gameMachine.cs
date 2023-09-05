@@ -1,6 +1,6 @@
-﻿using _4pictures1word.models;
+﻿using P122310544TM.models;
 
-namespace _4pictures1word.krsutils
+namespace P122310544TM.krsutils
 {
     public class GameMachine
     {

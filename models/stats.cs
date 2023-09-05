@@ -1,4 +1,4 @@
-﻿namespace _4pictures1word.models
+﻿namespace P122310544TM.models
 {
     public class Stats
     {

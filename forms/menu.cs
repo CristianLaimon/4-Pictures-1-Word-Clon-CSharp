@@ -1,6 +1,6 @@
-﻿using _4pictures1word.krsutils;
+﻿using P122310544TM.krsutils;
 
-namespace _4pictures1word.forms
+namespace P122310544TM.forms
 {
     public partial class menu : Form
     {
