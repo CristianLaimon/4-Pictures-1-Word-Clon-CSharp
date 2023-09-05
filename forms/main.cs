@@ -63,6 +63,7 @@ namespace P122310544TM
             {
                 //Codigo de la victoria
                 MessageBox.Show("Has ganado");
+                MessageBox.Show("Hecho por Kristan Ruíz Limón");
                 EndGame();
             }
         }
@@ -205,7 +206,7 @@ namespace P122310544TM
                         MessageBox.Show("Has perdido tus 3 vidas... Vuelve a intentarlo");
                         EndGame();
                         break;
-                      
+
                 }
             }
 
