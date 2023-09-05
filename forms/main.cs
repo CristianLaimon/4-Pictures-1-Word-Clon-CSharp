@@ -114,7 +114,7 @@ namespace P122310544TM
         {
             byte adder = 0;
 
-            foreach (PictureBox pb in this.Controls.OfType<PictureBox>())
+            foreach (PictureBox pb in this.Controls.OfType<PictureBox>().Where(x => Convert.ToInt32(x.Tag) == 22310544)) //Pequeño easter egg
             {
                 pb.ImageLocation = JSONWord.Imagespath[adder];
                 adder++;

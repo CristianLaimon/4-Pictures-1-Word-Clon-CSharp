@@ -49,48 +49,58 @@
             buttonEliminarLetters = new Button();
             flowLayoutPanel = new FlowLayoutPanel();
             tableLayoutPanel = new TableLayoutPanel();
+            pictureBoxVida3 = new PictureBox();
+            pictureBoxVida2 = new PictureBox();
+            pictureBoxVida1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             tableLayoutPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxVida3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxVida2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxVida1).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(110, 53);
+            pictureBox1.Location = new Point(117, 83);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(235, 215);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
+            pictureBox1.Tag = "22310544";
             // 
             // pictureBox2
             // 
-            pictureBox2.Location = new Point(351, 53);
+            pictureBox2.Location = new Point(358, 83);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(235, 215);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 1;
             pictureBox2.TabStop = false;
+            pictureBox2.Tag = "22310544";
             // 
             // pictureBox3
             // 
-            pictureBox3.Location = new Point(110, 274);
+            pictureBox3.Location = new Point(117, 304);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(235, 215);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 2;
             pictureBox3.TabStop = false;
+            pictureBox3.Tag = "22310544";
             // 
             // pictureBox4
             // 
-            pictureBox4.Location = new Point(351, 274);
+            pictureBox4.Location = new Point(358, 304);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(235, 215);
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 3;
             pictureBox4.TabStop = false;
+            pictureBox4.Tag = "22310544";
             // 
             // label1
             // 
@@ -104,18 +114,20 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(40, 22);
+            label2.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(272, 22);
             label2.Name = "label2";
-            label2.Size = new Size(43, 20);
+            label2.Size = new Size(80, 38);
             label2.TabIndex = 20;
             label2.Text = "Nivel";
             // 
             // labelLevelNumber
             // 
             labelLevelNumber.AutoSize = true;
-            labelLevelNumber.Location = new Point(89, 22);
+            labelLevelNumber.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            labelLevelNumber.Location = new Point(358, 22);
             labelLevelNumber.Name = "labelLevelNumber";
-            labelLevelNumber.Size = new Size(60, 20);
+            labelLevelNumber.Size = new Size(114, 38);
             labelLevelNumber.TabIndex = 21;
             labelLevelNumber.Text = "numero";
             // 
@@ -130,7 +142,7 @@
             // 
             // buttonMenu
             // 
-            buttonMenu.Location = new Point(556, 723);
+            buttonMenu.Location = new Point(546, 753);
             buttonMenu.Name = "buttonMenu";
             buttonMenu.Size = new Size(126, 29);
             buttonMenu.TabIndex = 23;
@@ -142,7 +154,7 @@
             // 
             button15.Enabled = false;
             button15.FlatStyle = FlatStyle.System;
-            button15.Location = new Point(98, 516);
+            button15.Location = new Point(88, 546);
             button15.Name = "button15";
             button15.Size = new Size(56, 52);
             button15.TabIndex = 24;
@@ -153,7 +165,7 @@
             // 
             button16.Enabled = false;
             button16.FlatStyle = FlatStyle.System;
-            button16.Location = new Point(160, 516);
+            button16.Location = new Point(150, 546);
             button16.Name = "button16";
             button16.Size = new Size(56, 52);
             button16.TabIndex = 25;
@@ -164,7 +176,7 @@
             // 
             button17.Enabled = false;
             button17.FlatStyle = FlatStyle.System;
-            button17.Location = new Point(222, 516);
+            button17.Location = new Point(212, 546);
             button17.Name = "button17";
             button17.Size = new Size(56, 52);
             button17.TabIndex = 26;
@@ -175,7 +187,7 @@
             // 
             button18.Enabled = false;
             button18.FlatStyle = FlatStyle.System;
-            button18.Location = new Point(284, 516);
+            button18.Location = new Point(274, 546);
             button18.Name = "button18";
             button18.Size = new Size(56, 52);
             button18.TabIndex = 27;
@@ -186,7 +198,7 @@
             // 
             button19.Enabled = false;
             button19.FlatStyle = FlatStyle.System;
-            button19.Location = new Point(346, 516);
+            button19.Location = new Point(336, 546);
             button19.Name = "button19";
             button19.Size = new Size(56, 52);
             button19.TabIndex = 28;
@@ -197,7 +209,7 @@
             // 
             button20.Enabled = false;
             button20.FlatStyle = FlatStyle.System;
-            button20.Location = new Point(408, 516);
+            button20.Location = new Point(398, 546);
             button20.Name = "button20";
             button20.Size = new Size(56, 52);
             button20.TabIndex = 29;
@@ -208,7 +220,7 @@
             // 
             button21.Enabled = false;
             button21.FlatStyle = FlatStyle.System;
-            button21.Location = new Point(470, 516);
+            button21.Location = new Point(460, 546);
             button21.Name = "button21";
             button21.Size = new Size(56, 52);
             button21.TabIndex = 30;
@@ -219,7 +231,7 @@
             // 
             button22.Enabled = false;
             button22.FlatStyle = FlatStyle.System;
-            button22.Location = new Point(530, 516);
+            button22.Location = new Point(520, 546);
             button22.Name = "button22";
             button22.Size = new Size(56, 52);
             button22.TabIndex = 31;
@@ -228,7 +240,7 @@
             // 
             // buttonEliminarLetters
             // 
-            buttonEliminarLetters.Location = new Point(601, 528);
+            buttonEliminarLetters.Location = new Point(591, 558);
             buttonEliminarLetters.Name = "buttonEliminarLetters";
             buttonEliminarLetters.Size = new Size(94, 29);
             buttonEliminarLetters.TabIndex = 32;
@@ -243,7 +255,7 @@
             flowLayoutPanel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             flowLayoutPanel.Location = new Point(288, 3);
             flowLayoutPanel.Name = "flowLayoutPanel";
-            flowLayoutPanel.Size = new Size(0, 99);
+            flowLayoutPanel.Size = new Size(0, 113);
             flowLayoutPanel.TabIndex = 33;
             // 
             // tableLayoutPanel
@@ -251,19 +263,46 @@
             tableLayoutPanel.ColumnCount = 1;
             tableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel.Controls.Add(flowLayoutPanel, 0, 0);
-            tableLayoutPanel.Location = new Point(64, 598);
+            tableLayoutPanel.Location = new Point(54, 628);
             tableLayoutPanel.Name = "tableLayoutPanel";
             tableLayoutPanel.RowCount = 1;
             tableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel.Size = new Size(576, 105);
+            tableLayoutPanel.Size = new Size(576, 119);
             tableLayoutPanel.TabIndex = 34;
+            // 
+            // pictureBoxVida3
+            // 
+            pictureBoxVida3.Location = new Point(625, 130);
+            pictureBoxVida3.Name = "pictureBoxVida3";
+            pictureBoxVida3.Size = new Size(47, 45);
+            pictureBoxVida3.TabIndex = 35;
+            pictureBoxVida3.TabStop = false;
+            // 
+            // pictureBoxVida2
+            // 
+            pictureBoxVida2.Location = new Point(625, 181);
+            pictureBoxVida2.Name = "pictureBoxVida2";
+            pictureBoxVida2.Size = new Size(47, 45);
+            pictureBoxVida2.TabIndex = 36;
+            pictureBoxVida2.TabStop = false;
+            // 
+            // pictureBoxVida1
+            // 
+            pictureBoxVida1.Location = new Point(625, 232);
+            pictureBoxVida1.Name = "pictureBoxVida1";
+            pictureBoxVida1.Size = new Size(47, 45);
+            pictureBoxVida1.TabIndex = 37;
+            pictureBoxVida1.TabStop = false;
             // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(718, 768);
+            ClientSize = new Size(717, 803);
             ControlBox = false;
+            Controls.Add(pictureBoxVida1);
+            Controls.Add(pictureBoxVida2);
+            Controls.Add(pictureBoxVida3);
             Controls.Add(tableLayoutPanel);
             Controls.Add(buttonEliminarLetters);
             Controls.Add(button22);
@@ -293,6 +332,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             tableLayoutPanel.ResumeLayout(false);
             tableLayoutPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxVida3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxVida2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxVida1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -319,5 +361,8 @@
         private Button buttonEliminarLetters;
         private FlowLayoutPanel flowLayoutPanel;
         private TableLayoutPanel tableLayoutPanel;
+        private PictureBox pictureBoxVida3;
+        private PictureBox pictureBoxVida2;
+        private PictureBox pictureBoxVida1;
     }
 }
