@@ -22,7 +22,7 @@ def generar_lista_json(palabras):
     return lista_json
 
 # Obtener la lista de palabras como entrada del usuario
-entrada = input("Ingresa las palabras separadas por coma: ")
+entrada = input("Pon las palabras entre comas porfa: ")
 
 # Dividir la entrada en una lista de palabras
 palabras = entrada.split(',')
