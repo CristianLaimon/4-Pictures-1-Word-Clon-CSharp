@@ -47,6 +47,20 @@
             button21 = new Button();
             button22 = new Button();
             buttonEliminarLetters = new Button();
+            button1 = new Button();
+            button2 = new Button();
+            button3 = new Button();
+            button4 = new Button();
+            button5 = new Button();
+            button6 = new Button();
+            button7 = new Button();
+            button8 = new Button();
+            button9 = new Button();
+            button10 = new Button();
+            button11 = new Button();
+            button12 = new Button();
+            button13 = new Button();
+            button14 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -233,11 +247,193 @@
             buttonEliminarLetters.UseVisualStyleBackColor = true;
             buttonEliminarLetters.Click += buttonEliminarLetters_Click;
             // 
+            // button1
+            // 
+            button1.Enabled = false;
+            button1.FlatStyle = FlatStyle.System;
+            button1.Location = new Point(127, 592);
+            button1.Name = "button1";
+            button1.Size = new Size(56, 52);
+            button1.TabIndex = 33;
+            button1.Tag = "";
+            button1.Text = "char";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.Enabled = false;
+            button2.FlatStyle = FlatStyle.System;
+            button2.Location = new Point(127, 650);
+            button2.Name = "button2";
+            button2.Size = new Size(56, 52);
+            button2.TabIndex = 34;
+            button2.Tag = "";
+            button2.Text = "char";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            button3.Enabled = false;
+            button3.FlatStyle = FlatStyle.System;
+            button3.Location = new Point(189, 650);
+            button3.Name = "button3";
+            button3.Size = new Size(56, 52);
+            button3.TabIndex = 36;
+            button3.Tag = "";
+            button3.Text = "char";
+            button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            button4.Enabled = false;
+            button4.FlatStyle = FlatStyle.System;
+            button4.Location = new Point(189, 592);
+            button4.Name = "button4";
+            button4.Size = new Size(56, 52);
+            button4.TabIndex = 35;
+            button4.Tag = "";
+            button4.Text = "char";
+            button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            button5.Enabled = false;
+            button5.FlatStyle = FlatStyle.System;
+            button5.Location = new Point(313, 650);
+            button5.Name = "button5";
+            button5.Size = new Size(56, 52);
+            button5.TabIndex = 40;
+            button5.Tag = "";
+            button5.Text = "char";
+            button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            button6.Enabled = false;
+            button6.FlatStyle = FlatStyle.System;
+            button6.Location = new Point(313, 592);
+            button6.Name = "button6";
+            button6.Size = new Size(56, 52);
+            button6.TabIndex = 39;
+            button6.Tag = "";
+            button6.Text = "char";
+            button6.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            button7.Enabled = false;
+            button7.FlatStyle = FlatStyle.System;
+            button7.Location = new Point(251, 650);
+            button7.Name = "button7";
+            button7.Size = new Size(56, 52);
+            button7.TabIndex = 38;
+            button7.Tag = "";
+            button7.Text = "char";
+            button7.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            button8.Enabled = false;
+            button8.FlatStyle = FlatStyle.System;
+            button8.Location = new Point(251, 592);
+            button8.Name = "button8";
+            button8.Size = new Size(56, 52);
+            button8.TabIndex = 37;
+            button8.Tag = "";
+            button8.Text = "char";
+            button8.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            button9.Enabled = false;
+            button9.FlatStyle = FlatStyle.System;
+            button9.Location = new Point(375, 650);
+            button9.Name = "button9";
+            button9.Size = new Size(56, 52);
+            button9.TabIndex = 42;
+            button9.Tag = "";
+            button9.Text = "char";
+            button9.UseVisualStyleBackColor = true;
+            // 
+            // button10
+            // 
+            button10.Enabled = false;
+            button10.FlatStyle = FlatStyle.System;
+            button10.Location = new Point(375, 592);
+            button10.Name = "button10";
+            button10.Size = new Size(56, 52);
+            button10.TabIndex = 41;
+            button10.Tag = "";
+            button10.Text = "char";
+            button10.UseVisualStyleBackColor = true;
+            // 
+            // button11
+            // 
+            button11.Enabled = false;
+            button11.FlatStyle = FlatStyle.System;
+            button11.Location = new Point(437, 650);
+            button11.Name = "button11";
+            button11.Size = new Size(56, 52);
+            button11.TabIndex = 44;
+            button11.Tag = "";
+            button11.Text = "char";
+            button11.UseVisualStyleBackColor = true;
+            // 
+            // button12
+            // 
+            button12.Enabled = false;
+            button12.FlatStyle = FlatStyle.System;
+            button12.Location = new Point(437, 592);
+            button12.Name = "button12";
+            button12.Size = new Size(56, 52);
+            button12.TabIndex = 43;
+            button12.Tag = "";
+            button12.Text = "char";
+            button12.UseVisualStyleBackColor = true;
+            // 
+            // button13
+            // 
+            button13.Enabled = false;
+            button13.FlatStyle = FlatStyle.System;
+            button13.Location = new Point(499, 650);
+            button13.Name = "button13";
+            button13.Size = new Size(56, 52);
+            button13.TabIndex = 46;
+            button13.Tag = "";
+            button13.Text = "char";
+            button13.UseVisualStyleBackColor = true;
+            // 
+            // button14
+            // 
+            button14.Enabled = false;
+            button14.FlatStyle = FlatStyle.System;
+            button14.Location = new Point(499, 592);
+            button14.Name = "button14";
+            button14.Size = new Size(56, 52);
+            button14.TabIndex = 45;
+            button14.Tag = "";
+            button14.Text = "char";
+            button14.UseVisualStyleBackColor = true;
+            // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(718, 768);
+            Controls.Add(button13);
+            Controls.Add(button14);
+            Controls.Add(button11);
+            Controls.Add(button12);
+            Controls.Add(button9);
+            Controls.Add(button10);
+            Controls.Add(button5);
+            Controls.Add(button6);
+            Controls.Add(button7);
+            Controls.Add(button8);
+            Controls.Add(button3);
+            Controls.Add(button4);
+            Controls.Add(button2);
+            Controls.Add(button1);
             Controls.Add(buttonEliminarLetters);
             Controls.Add(button22);
             Controls.Add(button21);
@@ -287,5 +483,19 @@
         private Button button21;
         private Button button22;
         private Button buttonEliminarLetters;
+        private Button button1;
+        private Button button2;
+        private Button button3;
+        private Button button4;
+        private Button button5;
+        private Button button6;
+        private Button button7;
+        private Button button8;
+        private Button button9;
+        private Button button10;
+        private Button button11;
+        private Button button12;
+        private Button button13;
+        private Button button14;
     }
 }
