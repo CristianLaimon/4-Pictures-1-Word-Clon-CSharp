@@ -178,7 +178,7 @@ namespace P122310544TM
 
         private void SharedButton_Click(object sender, EventArgs e)
         {
-            //COMPARACION DE UN ARRAY CON OTRO ARRAY de CHARS
+            //COMPARACION DE UN ARRAY CON OTRO ARRAY de CHARS -----------------------------------------------------------------------------------
             Button botonClickeado = (Button)sender;
             Char charsito = botonClickeado.Text.ToCharArray()[0];
 
@@ -194,10 +194,10 @@ namespace P122310544TM
                 }
             }
 
-            //Inhabilitar botón clickeado
+            //Inhabilitar botón clickeado -----------------------------------------------------------------------------------------------
             botonClickeado.Enabled = false;
 
-            //(Rework, ahora que cheque que todas están llenas)
+            //(Rework, ahora que cheque todas las letras, las arme en una palabra y compare el string con el que está en la "mini base de datos") Codigo de la victoria
             if (botonesLetter.Where(x => x.Enabled).All(x => x.Text != ""))
             {
                 List<Button> enableds = botonesLetter.Where(x => x.Enabled).OrderBy(x => Convert.ToInt32(x.Tag)).ToList();
@@ -210,7 +210,6 @@ namespace P122310544TM
 
                 if (JSONWord.Word == palabraCorrecta.ToString())
                 {
-                    //testing solamente
                     MessageBox.Show("Palabra Correcta!");
                     JsonManager.UpdateJSONword(JSONWord);
                     Statsitos.Level++;
@@ -311,7 +310,7 @@ namespace P122310544TM
             botonesChar.Clear();
             botonesChar = null;
             flowLayoutPanel.Controls.Clear();
-        } 
+        }
 
 
         #endregion

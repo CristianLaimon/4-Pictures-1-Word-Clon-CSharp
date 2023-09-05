@@ -48,10 +48,12 @@
             button22 = new Button();
             buttonEliminarLetters = new Button();
             flowLayoutPanel = new FlowLayoutPanel();
+            tableLayoutPanel = new TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            tableLayoutPanel.SuspendLayout();
             SuspendLayout();
             // 
             // pictureBox1
@@ -236,17 +238,33 @@
             // 
             // flowLayoutPanel
             // 
-            flowLayoutPanel.Location = new Point(73, 574);
+            flowLayoutPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            flowLayoutPanel.AutoSize = true;
+            flowLayoutPanel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            flowLayoutPanel.Location = new Point(288, 3);
             flowLayoutPanel.Name = "flowLayoutPanel";
-            flowLayoutPanel.Size = new Size(576, 143);
+            flowLayoutPanel.Size = new Size(0, 99);
             flowLayoutPanel.TabIndex = 33;
+            // 
+            // tableLayoutPanel
+            // 
+            tableLayoutPanel.ColumnCount = 1;
+            tableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel.Controls.Add(flowLayoutPanel, 0, 0);
+            tableLayoutPanel.Location = new Point(64, 598);
+            tableLayoutPanel.Name = "tableLayoutPanel";
+            tableLayoutPanel.RowCount = 1;
+            tableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel.Size = new Size(576, 105);
+            tableLayoutPanel.TabIndex = 34;
             // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(718, 768);
-            Controls.Add(flowLayoutPanel);
+            ControlBox = false;
+            Controls.Add(tableLayoutPanel);
             Controls.Add(buttonEliminarLetters);
             Controls.Add(button22);
             Controls.Add(button21);
@@ -265,6 +283,7 @@
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
+            MaximizeBox = false;
             Name = "Main";
             Text = "4 Pictures 1 Answer";
             FormClosing += Main_FormClosing;
@@ -272,6 +291,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            tableLayoutPanel.ResumeLayout(false);
+            tableLayoutPanel.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -297,5 +318,6 @@
         private Button button22;
         private Button buttonEliminarLetters;
         private FlowLayoutPanel flowLayoutPanel;
+        private TableLayoutPanel tableLayoutPanel;
     }
 }
