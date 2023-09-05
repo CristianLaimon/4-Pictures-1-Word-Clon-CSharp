@@ -168,6 +168,7 @@ namespace P122310544TM
 
         private void SharedButton_Click(object sender, EventArgs e)
         {
+            //COMPARACION DE UN ARRAY CON OTRO ARRAY de CHARS
             Button botonClickeado = (Button)sender;
             Char charsito = botonClickeado.Text.ToCharArray()[0];
 
@@ -183,12 +184,10 @@ namespace P122310544TM
                 }
             }
 
-            
-
             //Inhabilitar botón clickeado
             botonClickeado.Enabled = false;
 
-            //Verificar última letra de la palabra (Rework, ahora que cheque que todas están llenas)
+            //(Rework, ahora que cheque que todas están llenas)
             if (botonesLetter.Where(x => x.Enabled).All(x => x.Text != ""))
             {
                 List<Button> enableds = botonesLetter.Where(x => x.Enabled).OrderBy(x => Convert.ToInt32(x.Tag)).ToList();
@@ -304,10 +303,6 @@ namespace P122310544TM
             flowLayoutPanel.Controls.Clear();
         } 
 
-        private void CheckChar()
-        {
-
-        }
 
         #endregion
     }
