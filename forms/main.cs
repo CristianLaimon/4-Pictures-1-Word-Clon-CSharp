@@ -189,7 +189,7 @@ namespace P122310544TM
             botonClickeado.Enabled = false;
 
             //Verificar última letra de la palabra (Rework, ahora que cheque que todas están llenas)
-            if (botonesLetter.Where(x => x.Enabled).OrderBy(x => Convert.ToInt32(x.Tag)).Last().Text != "")
+            if (botonesLetter.Where(x => x.Enabled).All(x => x.Text != ""))
             {
                 List<Button> enableds = botonesLetter.Where(x => x.Enabled).OrderBy(x => Convert.ToInt32(x.Tag)).ToList();
                 StringBuilder palabraCorrecta = new StringBuilder();
