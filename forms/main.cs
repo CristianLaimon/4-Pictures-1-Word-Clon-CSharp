@@ -133,7 +133,6 @@ namespace P122310544TM
             int totalBotones = wordChar.Count;
 
             List<Button> copyBotonesChar = new List<Button>(botonesChar);
-            //List<Button> botonesChar = this.Controls.OfType<Button>().Where(k => k.Text == "char").ToList();
 
             for (int i = 0; i < totalBotones * 2; i++)
             {
