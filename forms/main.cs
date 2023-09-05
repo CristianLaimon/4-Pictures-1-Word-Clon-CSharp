@@ -15,6 +15,7 @@ namespace P122310544TM
         private List<Button> botonesLetter;
         private List<Char> distinctChar;
         private Palabra JSONWord;
+        private sbyte vidas;
 
         public Stats Statsitos { get => statsitos; }
 
@@ -38,6 +39,7 @@ namespace P122310544TM
             AddSharedEvent();
             botonesLetter = this.Controls.OfType<Button>().Where(k => k.Text == "").OrderBy(k => Convert.ToInt16(k.Tag)).ToList();
             this.StartPosition = FormStartPosition.CenterScreen;
+            vidas = 3;
         }
         private void CargarNivel()
         {
@@ -61,23 +63,7 @@ namespace P122310544TM
             {
                 //Codigo de la victoria
                 MessageBox.Show("Has ganado");
-                Palabra[] pepe = JsonManager.GetJSONwords();
-
-                //Reiniciar palabras
-                for (int i = 0; i < pepe.Length; i++)
-                {
-                    pepe[i].Resolved = false;
-                }
-
-                //inhabilitar continuar del menu
-                 ((menu)Application.OpenForms[0]).DesableContinue();
-
-                //Guardar cambios
-                string resetedWord = JsonConvert.SerializeObject(pepe, Formatting.Indented);
-                File.WriteAllText(@"testdata\data.json", resetedWord);
-                GameMachine.permitirCierre = true;
-
-                this.Close();
+                EndGame();
             }
         }
 
@@ -183,14 +169,43 @@ namespace P122310544TM
             Char charsito = botonClickeado.Text.ToCharArray()[0];
 
             Char[] actualChars = JSONWord.Word.ToCharArray();
+            bool isCorrect = false;
 
             //añadir letras
             for (int i = 0; i < actualChars.Length; i++)
             {
                 if (actualChars[i] == charsito)
                 {
+                    isCorrect = true;
                     botonesLetter[i].Text = charsito.ToString();
                     botonClickeado.Enabled = false;
+                }
+            }
+
+
+            //Quitar vidas
+            if (!isCorrect)
+            {
+                vidas--;
+                switch (vidas)
+                {
+                    case 2:
+                        pictureBoxVida3.Image = null;
+                        break;
+
+                    case 1:
+                        pictureBoxVida2.Image = null;
+                        break;
+
+                    case 0:
+                        pictureBoxVida1.Image = null;
+                        break;
+
+                    case -1:
+                        MessageBox.Show("Has perdido tus 3 vidas... Vuelve a intentarlo");
+                        EndGame();
+                        break;
+                      
                 }
             }
 
@@ -218,10 +233,10 @@ namespace P122310544TM
                     UnloadButtons();
                     CargarNivel();
                 }
-                else
-                {
-                    MessageBox.Show("Palabra Incorrecta");
-                }
+                //else
+                //{
+                //    MessageBox.Show("Palabra Incorrecta");
+                //}
             }
         }
 
@@ -270,6 +285,27 @@ namespace P122310544TM
             }
             Application.OpenForms[0].Show();
             Application.OpenForms[0].BringToFront();
+        }
+
+        private void EndGame()
+        {
+            Palabra[] pepe = JsonManager.GetJSONwords();
+
+            //Reiniciar palabras
+            for (int i = 0; i < pepe.Length; i++)
+            {
+                pepe[i].Resolved = false;
+            }
+
+                 //inhabilitar continuar del menu
+                 ((menu)Application.OpenForms[0]).DesableContinue();
+
+            //Guardar cambios
+            string resetedWord = JsonConvert.SerializeObject(pepe, Formatting.Indented);
+            File.WriteAllText(@"testdata\data.json", resetedWord);
+            GameMachine.permitirCierre = true;
+
+            this.Close();
         }
 
         #endregion CloseForm Logic

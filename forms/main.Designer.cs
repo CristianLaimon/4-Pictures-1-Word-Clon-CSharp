@@ -280,6 +280,7 @@
             pictureBoxVida3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBoxVida3.TabIndex = 35;
             pictureBoxVida3.TabStop = false;
+            pictureBoxVida3.Tag = "3";
             // 
             // pictureBoxVida2
             // 
@@ -290,6 +291,7 @@
             pictureBoxVida2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBoxVida2.TabIndex = 36;
             pictureBoxVida2.TabStop = false;
+            pictureBoxVida2.Tag = "2";
             // 
             // pictureBoxVida1
             // 
@@ -300,6 +302,7 @@
             pictureBoxVida1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBoxVida1.TabIndex = 37;
             pictureBoxVida1.TabStop = false;
+            pictureBoxVida1.Tag = "1";
             // 
             // label3
             // 
