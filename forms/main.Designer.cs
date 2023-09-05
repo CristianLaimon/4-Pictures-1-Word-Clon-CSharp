@@ -52,6 +52,7 @@
             pictureBoxVida3 = new PictureBox();
             pictureBoxVida2 = new PictureBox();
             pictureBoxVida1 = new PictureBox();
+            label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -272,27 +273,42 @@
             // 
             // pictureBoxVida3
             // 
-            pictureBoxVida3.Location = new Point(625, 130);
+            pictureBoxVida3.Image = Properties.Resources.dc8rpfr_07f2ae6f_22fc_422e_bf5b_3712f7c190d9;
+            pictureBoxVida3.Location = new Point(626, 176);
             pictureBoxVida3.Name = "pictureBoxVida3";
             pictureBoxVida3.Size = new Size(47, 45);
+            pictureBoxVida3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBoxVida3.TabIndex = 35;
             pictureBoxVida3.TabStop = false;
             // 
             // pictureBoxVida2
             // 
-            pictureBoxVida2.Location = new Point(625, 181);
+            pictureBoxVida2.Image = Properties.Resources.dc8rpfr_07f2ae6f_22fc_422e_bf5b_3712f7c190d9;
+            pictureBoxVida2.Location = new Point(626, 227);
             pictureBoxVida2.Name = "pictureBoxVida2";
             pictureBoxVida2.Size = new Size(47, 45);
+            pictureBoxVida2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBoxVida2.TabIndex = 36;
             pictureBoxVida2.TabStop = false;
             // 
             // pictureBoxVida1
             // 
-            pictureBoxVida1.Location = new Point(625, 232);
+            pictureBoxVida1.Image = Properties.Resources.dc8rpfr_07f2ae6f_22fc_422e_bf5b_3712f7c190d9;
+            pictureBoxVida1.Location = new Point(626, 278);
             pictureBoxVida1.Name = "pictureBoxVida1";
             pictureBoxVida1.Size = new Size(47, 45);
+            pictureBoxVida1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBoxVida1.TabIndex = 37;
             pictureBoxVida1.TabStop = false;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(626, 141);
+            label3.Name = "label3";
+            label3.Size = new Size(45, 20);
+            label3.TabIndex = 38;
+            label3.Text = "Vidas";
             // 
             // Main
             // 
@@ -300,6 +316,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(717, 803);
             ControlBox = false;
+            Controls.Add(label3);
             Controls.Add(pictureBoxVida1);
             Controls.Add(pictureBoxVida2);
             Controls.Add(pictureBoxVida3);
@@ -364,5 +381,6 @@
         private PictureBox pictureBoxVida3;
         private PictureBox pictureBoxVida2;
         private PictureBox pictureBoxVida1;
+        private Label label3;
     }
 }

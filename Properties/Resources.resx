@@ -121,4 +121,7 @@
   <data name="R" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\R.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="dc8rpfr-07f2ae6f-22fc-422e-bf5b-3712f7c190d9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dc8rpfr-07f2ae6f-22fc-422e-bf5b-3712f7c190d9.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

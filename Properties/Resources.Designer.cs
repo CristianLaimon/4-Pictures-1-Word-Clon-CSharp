@@ -8,9 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace P122310544TM
-
-    .Properties {
+namespace P122310544TM.Properties {
     using System;
     
     
@@ -59,6 +57,16 @@ namespace P122310544TM
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dc8rpfr_07f2ae6f_22fc_422e_bf5b_3712f7c190d9 {
+            get {
+                object obj = ResourceManager.GetObject("dc8rpfr-07f2ae6f-22fc-422e-bf5b-3712f7c190d9", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
