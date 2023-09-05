@@ -130,13 +130,14 @@ namespace P122310544TM
 
             List<Char> wordChar = JSONWord.Word.ToCharArray().ToList();
             List<Char> alphabetLore = new List<Char>(GameMachine.Alphabet);
+            int totalBotones = wordChar.Count;
 
             List<Button> copyBotonesChar = new List<Button>(botonesChar);
             //List<Button> botonesChar = this.Controls.OfType<Button>().Where(k => k.Text == "char").ToList();
 
-            for (int i = 0; i < 14; i++)
+            for (int i = 0; i < totalBotones*2; i++)
             {
-                buttonIndex = random.Next(botonesChar.Count);
+                buttonIndex = random.Next(wordChar.Count);
 
                 if (wordChar.Count != 0)
                 {
@@ -198,6 +199,7 @@ namespace P122310544TM
                     Statsitos.Level++;
                     Statsitos.Money += 20;
                     JsonManager.UpdateJSONstats(Statsitos);
+                    UnloadButtons();
                     CargarNivel();
                 }
                 else
@@ -225,6 +227,7 @@ namespace P122310544TM
             {
                 button.Enabled = true;
             }
+
         }
 
         #endregion Handlers;IMPORTANT
@@ -280,6 +283,17 @@ namespace P122310544TM
                 //Para mi como programador (no sé crear excepciones todavía)
                 MessageBox.Show("Error, no puedes poner mas de 16 botones");
             }
+        }
+
+        private void UnloadButtons()
+        {
+            foreach (Button b in botonesChar)
+            {
+                b.Click -= SharedButton_Click;
+            }
+            botonesChar.Clear();
+            botonesChar = null;
+            flowLayoutPanel.Controls.Clear();
         }
 
         #endregion
