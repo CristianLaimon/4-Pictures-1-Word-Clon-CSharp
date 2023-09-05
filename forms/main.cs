@@ -13,6 +13,7 @@ namespace P122310544TM
         private byte indexLetter;
         private List<Button> botonesChar;
         private List<Button> botonesLetter;
+        private List<Char> distinctChar;
         private Palabra JSONWord;
 
         public Stats Statsitos { get => statsitos; }
@@ -47,8 +48,9 @@ namespace P122310544TM
                 labelLevelNumber.Text = Statsitos.Level.ToString();
                 labelMoneyNumber.Text = Statsitos.Money.ToString();
                 JSONWord = GameMachine.ChooseWord();
+                distinctChar = JSONWord.Word.Distinct().ToList();
 
-                AddButtons(JSONWord.Word.Length * 2);
+                AddButtons(distinctChar.Count * 2);
 
                 AddImages();
                 ChangeButtons();
@@ -128,21 +130,21 @@ namespace P122310544TM
             int buttonIndex;
             Random random = new Random();
 
-            List<Char> wordChar = JSONWord.Word.ToCharArray().ToList();
+            //List<Char> wordChar = JSONWord.Word.ToCharArray().ToList();
             List<Char> alphabetLore = new List<Char>(GameMachine.Alphabet);
-            int totalBotones = wordChar.Count;
+            int totalBotones = distinctChar.Count;
 
             List<Button> copyBotonesChar = new List<Button>(botonesChar);
 
             for (int i = 0; i < totalBotones * 2; i++)
             {
-                buttonIndex = random.Next(wordChar.Count);
+                buttonIndex = random.Next(distinctChar.Count);
 
-                if (wordChar.Count != 0)
+                if (distinctChar.Count != 0)
                 {
-                    int wordCharIndex = random.Next(wordChar.Count);
-                    botonesChar[buttonIndex].Text = wordChar[wordCharIndex].ToString();
-                    wordChar.RemoveAt(wordCharIndex);
+                    int wordCharIndex = random.Next(distinctChar.Count);
+                    botonesChar[buttonIndex].Text = distinctChar[wordCharIndex].ToString();
+                    distinctChar.RemoveAt(wordCharIndex);
 
                     for (int j = 0; j < alphabetLore.Count; j++)
                     {
