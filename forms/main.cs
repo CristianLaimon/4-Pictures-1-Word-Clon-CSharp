@@ -3,6 +3,7 @@ using P122310544TM.krsutils;
 using P122310544TM.models;
 using Newtonsoft.Json;
 using System.Text;
+using System.Windows.Forms;
 
 namespace P122310544TM
 {
@@ -25,6 +26,18 @@ namespace P122310544TM
             CargarNivel();
         }
 
+        private void CargarForm()
+        {
+            //Realmente nunca se cierra, solo se esconde.Solo se cerrará cuando gane el juego para que se reinicie. Cuando se reinicia
+            //tiene que evitar que se cierra y para eso es lo siguiente, hasta que vuelva a ganar y así repetirse
+            if (GameMachine.permitirCierre == true) GameMachine.permitirCierre = false;
+
+            //Solo se ocupa añadir una vez los eventos a los BOTONES char y después reutilizar
+            botonesChar = Controls.OfType<Button>().Where(k => k.Text == "char").ToList();
+            AddSharedEvent();
+            botonesLetter = this.Controls.OfType<Button>().Where(k => k.Text == "").OrderBy(k => Convert.ToInt16(k.Tag)).ToList();
+            this.StartPosition = FormStartPosition.CenterScreen;
+        }
         private void CargarNivel()
         {
             if (!GameMachine.CheckWin())
@@ -34,6 +47,9 @@ namespace P122310544TM
                 labelLevelNumber.Text = Statsitos.Level.ToString();
                 labelMoneyNumber.Text = Statsitos.Money.ToString();
                 JSONWord = GameMachine.ChooseWord();
+
+                AddButtons(JSONWord.Word.Length * 2);
+
                 AddImages();
                 ChangeButtons();
                 LimpiarButtons();
@@ -63,26 +79,14 @@ namespace P122310544TM
             }
         }
 
+
+
         public void RestartStats()
         {
             Statsitos.Level = 1;
             Statsitos.Money = 0;
             JsonManager.UpdateJSONstats(Statsitos);
         }
-
-        private void CargarForm()
-        {
-            //Realmente nunca se cierra, solo se esconde.Solo se cerrará cuando gane el juego para que se reinicie. Cuando se reinicia
-            //tiene que evitar que se cierra y para eso es lo siguiente, hasta que vuelva a ganar y así repetirse
-            if (GameMachine.permitirCierre == true) GameMachine.permitirCierre = false;
-
-            //Solo se ocupa añadir una vez los eventos a los BOTONES char y después reutilizar
-            botonesChar = Controls.OfType<Button>().Where(k => k.Text == "char").ToList();
-            AddSharedEvent();
-            botonesLetter = this.Controls.OfType<Button>().Where(k => k.Text == "").OrderBy(k => Convert.ToInt16(k.Tag)).ToList();
-            this.StartPosition = FormStartPosition.CenterScreen;
-        }
-
         private void AddSharedEvent()
         {
             foreach (Button botonChar in botonesChar)
@@ -250,5 +254,34 @@ namespace P122310544TM
         }
 
         #endregion CloseForm Logic
+
+        #region NewChanges
+        private void AddButtons(int numberButtons)
+        {
+            if (numberButtons <= 16)
+            {
+                 botonesChar = new List<Button>();
+                for (int i = 0; i < numberButtons; i++)
+                {
+                    Button b = new Button();
+
+                    b.Cursor = Cursors.Hand;
+                    b.Size = new Size(49, 46);
+                    b.Text = "char";
+                    b.Tag = i;
+                    b.UseVisualStyleBackColor = true;
+                    botonesChar.Add(b);
+                    flowLayoutPanel.Controls.Add(b);
+                    b.Click += SharedButton_Click;
+                }
+            }
+            else
+            {
+                //Para mi como programador (no sé crear excepciones todavía)
+                MessageBox.Show("Error, no puedes poner mas de 16 botones");
+            }
+        }
+
+        #endregion
     }
 }

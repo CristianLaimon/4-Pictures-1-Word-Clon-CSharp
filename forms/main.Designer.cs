@@ -47,6 +47,7 @@
             button21 = new Button();
             button22 = new Button();
             buttonEliminarLetters = new Button();
+            flowLayoutPanel = new FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -233,11 +234,19 @@
             buttonEliminarLetters.UseVisualStyleBackColor = true;
             buttonEliminarLetters.Click += buttonEliminarLetters_Click;
             // 
+            // flowLayoutPanel
+            // 
+            flowLayoutPanel.Location = new Point(73, 574);
+            flowLayoutPanel.Name = "flowLayoutPanel";
+            flowLayoutPanel.Size = new Size(576, 143);
+            flowLayoutPanel.TabIndex = 33;
+            // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(718, 768);
+            Controls.Add(flowLayoutPanel);
             Controls.Add(buttonEliminarLetters);
             Controls.Add(button22);
             Controls.Add(button21);
@@ -287,5 +296,6 @@
         private Button button21;
         private Button button22;
         private Button buttonEliminarLetters;
+        private FlowLayoutPanel flowLayoutPanel;
     }
 }
