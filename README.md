@@ -1,6 +1,6 @@
 # 4 Pictures 1 Word - Hangman Edition
 
-An easy gamme made in c# with the purpose of learning the language, its kinda interesting and maybe you can have fun of it, do whatever you want with it, its free.
+An easy game made in c# with the purpose of learning the language, its kinda interesting and maybe you can have fun of it, do whatever you want with it, its free.
 
 ## How to use
 
