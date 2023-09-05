@@ -121,6 +121,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(370, 550);
+            ControlBox = false;
             Controls.Add(labelDineroActual);
             Controls.Add(buttonContinuar);
             Controls.Add(statusStrip1);
@@ -128,6 +129,7 @@
             Controls.Add(buttonSalir);
             Controls.Add(buttonJugar);
             Controls.Add(label1);
+            MaximizeBox = false;
             Name = "menu";
             Text = "4 Pictures 1 Answer - Game";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
