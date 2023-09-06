@@ -5,7 +5,7 @@ def generar_objeto_json(palabra):
     imagespath = []
     palabra_minusculas = palabra.lower().strip()  # Convertir la palabra a minúsculas y eliminar espacios
     for i in range(1, 5):
-        imagen = f"images\\{palabra_minusculas}_{i}.jfif"
+        imagen = f"images\\{palabra_minusculas}_{i}.jpeg"
         imagespath.append(imagen)
 
     objeto_json = {

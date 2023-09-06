@@ -128,5 +128,105 @@
       "images\\viento_4.jfif"
     ],
     "Word": "VIENTO"
+  },
+  {
+    "Resolved": false,
+    "Imagespath": [
+      "images\\abuela_1.jpeg",
+      "images\\abuela_2.jpeg",
+      "images\\abuela_3.jpeg",
+      "images\\abuela_4.jpeg"
+    ],
+    "Word": "ABUELA"
+  },
+  {
+    "Resolved": false,
+    "Imagespath": [
+      "images\\evento_1.jpeg",
+      "images\\evento_2.jpeg",
+      "images\\evento_3.jpeg",
+      "images\\evento_4.jpeg"
+    ],
+    "Word": "EVENTO"
+  },
+  {
+    "Resolved": false,
+    "Imagespath": [
+      "images\\homo_1.jpeg",
+      "images\\homo_2.jpeg",
+      "images\\homo_3.jpeg",
+      "images\\homo_4.jpeg"
+    ],
+    "Word": "HOMO"
+  },
+  {
+    "Resolved": false,
+    "Imagespath": [
+      "images\\padre_1.jpeg",
+      "images\\padre_2.jpeg",
+      "images\\padre_3.jpeg",
+      "images\\padre_4.jpeg"
+    ],
+    "Word": "PADRE"
+  },
+  {
+    "Resolved": false,
+    "Imagespath": [
+      "images\\pareja_1.jpeg",
+      "images\\pareja_2.jpeg",
+      "images\\pareja_3.jpeg",
+      "images\\pareja_4.jpeg"
+    ],
+    "Word": "PAREJA"
+  },
+  {
+    "Resolved": false,
+    "Imagespath": [
+      "images\\peluche_1.jpeg",
+      "images\\peluche_2.jpeg",
+      "images\\peluche_3.jpeg",
+      "images\\peluche_4.jpeg"
+    ],
+    "Word": "PELUCHE"
+  },
+  {
+    "Resolved": false,
+    "Imagespath": [
+      "images\\perro_1.jpeg",
+      "images\\perro_2.jpeg",
+      "images\\perro_3.jpeg",
+      "images\\perro_4.jpeg"
+    ],
+    "Word": "PERRO"
+  },
+  {
+    "Resolved": false,
+    "Imagespath": [
+      "images\\silla_1.jpeg",
+      "images\\silla_2.jpeg",
+      "images\\silla_3.jpeg",
+      "images\\silla_4.jpeg"
+    ],
+    "Word": "SILLA"
+  },
+  {
+    "Resolved": false,
+    "Imagespath": [
+      "images\\soledad_1.jpeg",
+      "images\\soledad_2.jpeg",
+      "images\\soledad_3.jpeg",
+      "images\\soledad_4.jpeg"
+    ],
+    "Word": "SOLEDAD"
+  },
+  {
+    "Resolved": false,
+    "Imagespath": [
+      "images\\tunel_1.jpeg",
+      "images\\tunel_2.jpeg",
+      "images\\tunel_3.jpeg",
+      "images\\tunel_4.jpeg"
+    ],
+    "Word": "TUNEL"
   }
 ]
