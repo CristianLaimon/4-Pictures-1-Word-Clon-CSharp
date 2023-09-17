@@ -20,4 +20,3 @@ Like the title of this game says, its some kind of mix from the popular game for
 
 I know, by the moment, the game is only in spanish, but i will translate it to english soon. :D
 
-Made by krs
